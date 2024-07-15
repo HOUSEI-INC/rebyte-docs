@@ -6,7 +6,7 @@
 
 このアクションは、入力として `file_id` を受け取り、そのファイルから抽出されたデータを返します。 `file_id` は imprai にアップロードされたファイルの一意の識別子です。
 
-ファイル形式として。DOC、DOCX、IMG、EPUB、JPEG、JPG、PNG、XLS、XLSX、PPT、PPTX、MD、TXT、RTF、MD、TXT、RTF、RST、PDF、JSON、HTML、EML など様々なデータ型をサポートしています。
+ファイル形式として。DOC、DOCX、IMG、EPUB、JPEG、JPG、PNG、XLS、XLSX、PPT、PPTX、MD、TXT、RTF、RST、PDF、JSON、HTML、EML など様々なデータ型をサポートしています。
 
 ## 使い方
 
