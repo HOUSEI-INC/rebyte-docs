@@ -12,7 +12,7 @@ imprai は、単調で反復的なタスクを支援することで、チーム�
 | アシスタントが使用するツール | どんな複雑なワークフローも imprai Workflow Runtime によって実行 | コードインタープリタ/ブラウザ/RAG/外部 API などを選択して実行 |
 | データ統合                   | Notion/Slack/Discord/Twitter などとの同期が自動的に処理される   | データ統合なし                                                |
 
-<figure><img src=".gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
+<!--<figure><img src=".gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>-->
 
 ## imprai の背景
 
