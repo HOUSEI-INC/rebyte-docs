@@ -13,6 +13,8 @@ Revia の他にも、チーム管理者は特定のユースケースに特化�
 
 **Revia**と**他のアシスタント**の関係は、**ChatGPT**と**GPTs**の関係に似ています。
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/mZL7D5-1w_0?si=2ir8RVniSbZiLsMH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ## Builder Platform
 
 チーム内のビルダーまたは管理者のみが Builder Platform にアクセスできます。Builder Platform の主要なコンポーネントは次の通りです：
