@@ -14,12 +14,12 @@
 ## 開発者向け
 
 - [チュートリアル](developers/tutorial.md)
-- [ツールの概要](overview/understanding-imprai-architecture.md)
-- [ツールの反復開発プロセス](developers/iterative-development-process-of-an-agent.md)
-- [ツールの設計](agents/design-your-agent/README.md)
+- [エージェントの概要](overview/understanding-imprai-architecture.md)
+- [エージェントの反復開発プロセス](developers/iterative-development-process-of-an-agent.md)
+- [エージェントの設計](agents/design-your-agent/README.md)
 - [](agents/design-your-agent/reference-action-output.md)
-- [ツールのデプロイ](agents/deploy-your-agent.md)
-- [ツールの例](agents/example-tool.md)
+- [エージェントのデプロイ](agents/deploy-your-agent.md)
+- [エージェントの例](agents/example-tool.md)
 - [アクション](agents/design-your-agent/actions/README.md)
   - [入力](agents/design-your-agent/actions/input.md)
   - [出力](agents/design-your-agent/actions/output.md)
@@ -31,8 +31,8 @@
     - [データセットローダー](agents/design-your-agent/actions/data/dataset-loader.md)
     - [ヒストリーメッセージローダー](agents/design-your-agent/actions/data/thread-messages-loader.md)
   - [コード](agents/design-your-agent/actions/code.md)
-  - [ツール](agents/design-your-agent/actions/tools/README.md)
-    - [ツールの呼び出し](agents/design-your-agent/actions/tools/call-agent.md)
+  - [エージェント](agents/design-your-agent/actions/tools/README.md)
+    - [エージェントの呼び出し](agents/design-your-agent/actions/tools/call-agent.md)
     - [Google 検索](agents/design-your-agent/actions/tools/google-search.md)
     <!-- - [You.com 検索](agents/design-your-agent/actions/tools/you-search.md) -->
     - [HTTP リクエストマーカー](agents/design-your-agent/actions/tools/http-request-maker.md)
@@ -50,13 +50,13 @@
     - [Loop-Until](agents/design-your-agent/actions/control-flow/loop-until.md)
     - [Map-Reduce](agents/design-your-agent/actions/control-flow/map-reduce.md)
     - [Early Return](agents/design-your-agent/actions/control-flow/early-return.md)
-- [ツールのテスト](developers/test-your-agent/README.md)
+- [エージェントのテスト](developers/test-your-agent/README.md)
   - [概要](agents/test-your-agent/overview.md)
   - [データセット](agents/test-your-agent/datasets.md)
   <!-- - [プレイグラウンド](agents/test-your-agent/playground.md) -->
   - [実行](agents/test-your-agent/runs.md)
-- [ツールのデプロイ](agents/deploy-your-agent.md)
-<!-- - [ツール API](agents/deploy-your-agent.md) -->
+- [エージェントのデプロイ](agents/deploy-your-agent.md)
+<!-- - [エージェント API](agents/deploy-your-agent.md) -->
 
 ## ナレッジ
 
@@ -67,7 +67,7 @@
 ## API
 
 - [概要](assistant/overview.md)
-- [ツール](assistant/api.md)
+- [エージェント](assistant/api.md)
 - [スレッド](assistant/thread.md)
 - [メッセージ](assistant/message.md)
 - [ファイル](assistant/file.md)

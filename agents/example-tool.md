@@ -1,12 +1,12 @@
-# ツール作成の例
+# エージェント作成の例
 
-ツール作成は「デザイン」画面で行います。以下がその画像です：
+エージェント作成は「デザイン」画面で行います。以下がその画像です：
 
 <figure><img src="../images/screenshot-20240703-123724.png" alt=""></figure>
 
-このツールは`INPUT`、`EXTRACT_QUESTION`、`MESSAGES`、`RETRIEVALS`、`RETRIEVALS＿RESULT`、`OUTPUT_STREAM`、`GET_ANSWER`、`OUTPUT`の８つのブロックから構成されています。
+このエージェントは`INPUT`、`EXTRACT_QUESTION`、`MESSAGES`、`RETRIEVALS`、`RETRIEVALS＿RESULT`、`OUTPUT_STREAM`、`GET_ANSWER`、`OUTPUT`の８つのブロックから構成されています。
 
-- `INPUT`はツールを作成する上で必須で、ここではユーザーの質問を JSON 形式に変換するブロックです。
+- `INPUT`はエージェントを作成する上で必須で、ここではユーザーの質問を JSON 形式に変換するブロックです。
 
 <figure><img src="../images/screenshot-20240703-124735.png" alt=""></figure>
 
