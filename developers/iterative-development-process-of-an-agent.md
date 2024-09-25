@@ -1,11 +1,9 @@
-# Iterative Development Process of An Agent
+# 代理的迭代开发过程
 
-Language models are naturally unpredictable, even though lots of techniques have been developed to make them more predictable, for example OpenAI has a seed parameter that can be used to control the randomness of the model. This dramatically changes how we ship software. In the past, we would write a piece of code, compile it, and then ship it. Now, we write a software agent, the only we can guarantee that the agent is working as expected is to have this agent run through a list of test datasets, and evaluate the result to see if it is passing some threshold.
+语言模型本质上是不可预测的，尽管已经开发了许多技术来使它们更加可预测，例如 OpenAI 有一个种子参数可以用来控制模型的随机性。这极大地改变了我们发布软件的方式。过去，我们会编写一段代码，编译它，然后发布。现在，我们编写一个软件代理，唯一能确保代理按预期工作的方法是让这个代理运行一系列测试数据集，并评估结果是否通过某些阈值。
 
-## Iterative Development process of an agent
+## 代理的迭代开发过程
 
-In Rebyte, the first thing to design an agent is to create a test dataset. A test dataset is attached to **INPUT** action of agent, which is always the first action of an agent. In Design Mode, all test cases will be run in parallel to make the whole process faster, also action can be set to 'cache' mode to further speed up the process and save token usage.
-
-
+在 Rebyte 中，设计代理的第一步是创建一个测试数据集。测试数据集附加到代理的 **INPUT** 操作上，这始终是代理的第一个操作。在设计模式下，所有测试用例将并行运行以加快整个过程，同时操作可以设置为"缓存"模式，以进一步加快处理速度并节省令牌使用。
 
 <figure><img src="../.gitbook/assets/image (13).png" alt=""><figcaption></figcaption></figure>

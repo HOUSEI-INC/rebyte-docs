@@ -1,22 +1,20 @@
-# Design Your Agent
+# 设计您的代理
 
-## Mental Model of Agent Execution
+## 代理执行的底层逻辑
 
-* Agent contains a list of actions, for a single agent invocation, the actions will be executed in strict order. You can have multiple invocations of the same agent at the same time.
-* All actions except 'THREAD' are stateless across invocations.
-* 'THREAD' action is stateful across invocations, typically used to store the conversation history.
-* Downstream actions can access the output of actions that are executed before them.
+* 代理包含一系列操作，对于单次代理调用，这些操作将按严格顺序执行。您可以同时进行多次相同代理的调用。
+* 除了 'THREAD' 操作外，所有操作在不同调用之间都是无状态的。
+* 'THREAD' 操作在不同调用之间是有状态的，通常用于存储对话历史。
+* 后续操作可以访问在它们之前执行的操作的输出。
 
-## Spec and Config
-* Each action has a spec and a config.
-* The difference between spec is immutable at runtime, while config is mutable at runtime, which means you can change the config of an action when calling this action, but you can not change the spec of an action at runtime.
-* Action also contains a default config, if you don't provide a config when calling the action, the default config will be used.
+## 规格和配置
+* 每个操作都有一个规格和一个配置。
+* 规格和配置的区别在于：规格在运行时是不可变的，而配置在运行时是可变的。这意味着您可以在调用操作时更改操作的配置，但不能在运行时更改操作的规格。
+* 操作还包含一个默认配置，如果在调用操作时没有提供配置，将使用默认配置。
 
+## 操作
 
-## Action
+### 操作名称
 
-### Action Name
-
-* Action name must be uppercase, e.g. `INPUT`, `OUTPUT`, `SEND_EMAIL`. `_` is allowed in the action name.
-* Action name must be unique in the agent.
-
+* 操作名称必须是大写的，例如 `INPUT`、`OUTPUT`、`SEND_EMAIL`。操作名称中允许使用 `_`。
+* 操作名称在代理中必须是唯一的。

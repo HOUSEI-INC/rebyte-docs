@@ -1,16 +1,8 @@
-<<<<<<< Updated upstream
-# There are two ways to reference previous actions' output, depending on the action type.
-
-## Plain javascript syntax
-
-Use the `env.state` object to access the output of previous actions. For example, if you want to access the output of the `INPUT` action, you can use `env.state.INPUT`.
-=======
 # 有两种方式可以引用之前操作的输出，具体取决于操作类型。
 
 ## 普通 JavaScript 语法
 
 使用 `env.state` 对象来访问之前操作的输出。例如，如果你想访问 `INPUT` 操作的输出，可以使用 `env.state.INPUT`。
->>>>>>> Stashed changes
 
 ```javascript   
 const llmOutput = env.state.LLM_CALL;

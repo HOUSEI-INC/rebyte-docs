@@ -1,49 +1,49 @@
-# エージェント作成の例
+# 代理创建示例
 
-エージェント作成は「デザイン」画面で行います。以下がその画像です：
+代理创建在"设计"界面中进行。以下是该界面的截图：
 
 <figure><img src="../images/screenshot-20240703-123724.png" alt=""></figure>
 
-このエージェントは`INPUT`、`EXTRACT_QUESTION`、`MESSAGES`、`RETRIEVALS`、`RETRIEVALS＿RESULT`、`OUTPUT_STREAM`、`GET_ANSWER`、`OUTPUT`の８つのブロックから構成されています。
+这个代理由8个模块组成：`INPUT`、`EXTRACT_QUESTION`、`MESSAGES`、`RETRIEVALS`、`RETRIEVALS＿RESULT`、`OUTPUT_STREAM`、`GET_ANSWER`和`OUTPUT`。
 
-- `INPUT`はエージェントを作成する上で必須で、ここではユーザーの質問を JSON 形式に変換するブロックです。
+- `INPUT`是创建代理时必需的，在这里它将用户的问题转换为JSON格式。
 
 <figure><img src="../images/screenshot-20240703-124735.png" alt=""></figure>
 
-- `EXTRACT_QUESTION`はアクションの 1 つである`Code`を使用して`INPUT`の content を取得するブロックです。
+- `EXTRACT_QUESTION`使用`Code`操作来获取`INPUT`的content。
 
 <figure><img src="../images/screenshot-20240703-125745.png" alt=""></figure>
 
-- `MESSAGES`はアクションの 1 つである`Code`を使用して`INPUT`の messages をマッピングして role と content を返すブロックです。
+- `MESSAGES`使用`Code`操作来映射`INPUT`的messages，返回role和content。
 
 <figure><img src="../images/screenshot-20240703-130207.png" alt=""></figure>
 
-- `RETRIEVALS`はアクションの 1 つである`Knowledge Serach`を使用してナレッジデータベース検索するブロックです。ここではクエリとして`EXTRACT_QUESTION`を使用しています。
+- `RETRIEVALS`使用`Knowledge Search`操作来搜索知识数据库。这里使用`EXTRACT_QUESTION`作为查询。
 
 <figure><img src="../images/screenshot-20240703-131027.png" alt=""></figure>
 
-ここの部分ではメタデータが付与されるので、そのメタデータをダウンストリームアクションで使用できます。
+在这部分会添加元数据，下游操作可以使用这些元数据。
 
 <figure><img src="../images/screenshot-20240703-131221.png" alt=""></figure>
 
-- `RETRIEVALS＿RESULT`はアクションの 1 つである`Code`を使用して`RETRIEVALS`の document_id と chunk.text を取得し整形して返すブロックです。document_id を使用することで参照元を表示させることできます。
+- `RETRIEVALS＿RESULT`使用`Code`操作来获取`RETRIEVALS`的document_id和chunk.text，并进行格式化后返回。使用document_id可以显示参考来源。
 
 <figure><img src="../images/screenshot-20240703-131854.png" alt=""></figure>
 
 <figure><img src="../images/screenshot-20240703-131945.png" alt=""></figure>
 
-- `OUTPUT_STREAM`はアクションの 1 つである`Language Model Chat Interface`を使用しています。ここでは`RETRIEVALS＿RESULT`の情報に基づいて model に指示(プロンプト)をだし、そのプロンプトを system の content として，回答を assistant の content として`INPUT`に追加するブロックです。
+- `OUTPUT_STREAM`使用`Language Model Chat Interface`操作。这里基于`RETRIEVALS＿RESULT`的信息给模型发出指令（提示），将这个提示作为system的content，将回答作为assistant的content添加到`INPUT`中。
 
 <figure><img src="../images/screenshot-20240703-132441.png" alt=""></figure>
 
 <figure><img src="../images/screenshot-20240703-132506.png" alt=""></figure>
 
-- `GET_ANSWER`はアクションの 1 つである`Code`を使用して`OUTPUT_STREAM`の role の assistant とその content を返すブロックです。
+- `GET_ANSWER`使用`Code`操作来返回`OUTPUT_STREAM`中role为assistant的content。
 
 <figure><img src="../images/screenshot-20240703-133850.png" alt=""></figure>
 
-- `OUTPUT`は必須で、ここで`GET_ANSWER`の内容を受け取ります。
+- `OUTPUT`是必需的，它接收`GET_ANSWER`的内容。
 
 <figure><img src="../images/screenshot-20240703-134010.png" alt=""></figure>
 
-最終的に`OUTPUT`の content がユーザーへの回答になります。
+最终，`OUTPUT`的content将作为对用户的回答。
