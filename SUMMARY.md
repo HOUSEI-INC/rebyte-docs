@@ -1,77 +1,79 @@
-# Table of contents
+# 目录
 
-## One Minute Overview
+## 英璞来介绍
 
-* [One Pager](one-page.md)
+- [简介页面](one-page.md)
 
+## 用户指南
 
-## User's Guide
+- [概要](guide/overview.md)
+- [用户与团队](guide/teams/overview.md)
+- [使用团队助手](guide/teams/use-assistant.md)
+- [构建更多助手](guide/teams/build-assistant.md)
 
-* [Overview](guide/overview.md)
-* [User And Team](guide/teams/overview.md)
-* [Use Team Assistant](guide/teams/use-assistant.md)
-* [Build More Assistants](guide/teams/build-assistant.md)
+## 面向开发者
 
-## Developers
+- [教程视频](developers/tutorial.md)
+- [代理概要](overview/understanding-imprai-architecture.md)
+- [代理的迭代开发](developers/iterative-development-process-of-an-agent.md)
+- [代理设计](agents/design-your-agent/README.md)
+- [参考输出格式](agents/design-your-agent/reference-action-output.md)
+<!-- - [代理部署](agents/deploy-your-agent.md) -->
+- [代理工具样例](agents/example-tool.md)
+- [操作](agents/design-your-agent/actions/README.md)
+  - [输入](agents/design-your-agent/actions/input.md)
+  - [输出](agents/design-your-agent/actions/output.md)
+  - [模型](agents/design-your-agent/actions/model/README.md)
+    - [模型对话过程](agents/design-your-agent/actions/model/language-model-chat.md)
+    <!-- - [言語モデルコンプリート](agents/design-your-agent/actions/model/language-model-completion.md) -->
+  - [数据处理](agents/design-your-agent/actions/data/README.md)
+    - [文件上传](agents/design-your-agent/actions/data/file-loader.md)
+    - [数据集上传](agents/design-your-agent/actions/data/dataset-loader.md)
+    - [历史消息上传](agents/design-your-agent/actions/data/thread-messages-loader.md)
+  - [代码](agents/design-your-agent/actions/code.md)
+  - [代理](agents/design-your-agent/actions/tools/README.md)
+    - [代理调用](agents/design-your-agent/actions/tools/call-agent.md)
+    - [Google搜索](agents/design-your-agent/actions/tools/google-search.md)
+    <!-- - [You.com 検索](agents/design-your-agent/actions/tools/you-search.md) -->
+    - [HTTP请求标记](agents/design-your-agent/actions/tools/http-request-maker.md)
+    - [知识检索](agents/design-your-agent/actions/tools/knowledge-search.md)
+    - [网页爬取](agents/design-your-agent/actions/tools/web-page-crawler.md)
+        <!-- - [コードインタープリター](developers/design-your-agent/actions/tools/code-interpreter.md) -->
+        <!-- - [高度なコード実行](agents/design-your-agent/actions/tools/advanced-code-executor.md) -->
+        <!-- - [Dalle 画像生成器](agents/design-your-agent/actions/tools/dalle-image-generator.md)
+          <!-- - [Stable Diffusion](agents/design-your-agent/actions/tools/stable-diffusion.md)
+        <!-- - [ヒストリーメッセージローダー](agents/design-your-agent/actions/tools/thread-message-loader.md) -->
+        <!-- - [テキストから音声へ](agents/design-your-agent/actions/tools/text-to-audio.md) -->
+      <!-- - [すべてを可視化](agents/design-your-agent/actions/tools/visualize-everything.md) -->
+  - [控制流](agents/design-your-agent/actions/control-flow/README.md)
+    - [If-Else](agents/design-your-agent/actions/control-flow/if-else.md)
+    - [循环执行](agents/design-your-agent/actions/control-flow/loop-until.md)
+    - [Map-Reduce](agents/design-your-agent/actions/control-flow/map-reduce.md)
+    - [提前返回](agents/design-your-agent/actions/control-flow/early-return.md)
+- [代理测试](developers/test-your-agent/README.md)
+  - [概要](agents/test-your-agent/overview.md)
+  - [测试数据](agents/test-your-agent/datasets.md)
+  <!-- - [プレイグラウンド](agents/test-your-agent/playground.md) -->
+  - [运行](agents/test-your-agent/runs.md)
+- [代理部署](agents/deploy-your-agent.md)
+<!-- - [エージェント API](agents/deploy-your-agent.md) -->
 
-* [Agent Overview](overview/understanding-rebyte-architecture.md)
-* [Iterative Development Process of An Agent](developers/iterative-development-process-of-an-agent.md)
-* [Design Your Agent](agents/design-your-agent/README.md)
-* [Reference Action Output](agents/design-your-agent/reference-action-output.md)
-* [Deploy Your Agent](agents/deploy-your-agent.md)
-* [Actions](agents/design-your-agent/actions/README.md)
-  * [Input](agents/design-your-agent/actions/input.md)
-  * [Output](agents/design-your-agent/actions/output.md)
-  * [Model](agents/design-your-agent/actions/model/README.md)
-    * [Language Model Chat](agents/design-your-agent/actions/model/language-model-chat.md)
-    * [Language Model Completion](agents/design-your-agent/actions/model/language-model-completion.md)
-  * [Data](agents/design-your-agent/actions/data/README.md)
-    * [File Loader](agents/design-your-agent/actions/data/file-loader.md)
-    * [Dataset Loader](agents/design-your-agent/actions/data/dataset-loader.md)
-    * [Thread Messages Loader](agents/design-your-agent/actions/data/thread-messages-loader.md)
-  * [Code](agents/design-your-agent/actions/code.md)
-  * [Tools](agents/design-your-agent/actions/tools/README.md)
-    * [Call Agent](agents/design-your-agent/actions/tools/call-agent.md)
-    * [Google Search](agents/design-your-agent/actions/tools/google-search.md)
-    * [You.com Search](agents/design-your-agent/actions/tools/you-search.md)
-    * [Http Request Maker](agents/design-your-agent/actions/tools/http-request-maker.md)
-    * [Knowledge Search](agents/design-your-agent/actions/tools/knowledge-search.md)
-    * [Web Page Crawler](agents/design-your-agent/actions/tools/web-page-crawler.md)
-    * [Code Interpreter](developers/design-your-agent/actions/tools/code-interpreter.md)
-    * [Advance Code Executor](agents/design-your-agent/actions/tools/advanced-code-executor.md)
-    * [Dalle Image Generator](agents/design-your-agent/actions/tools/dalle-image-generator.md)
-    * [Stable Diffusion](agents/design-your-agent/actions/tools/stable-diffusion.md)
-    * [Thread Message Loader](agents/design-your-agent/actions/tools/thread-message-loader.md)
-    * [Text to Audio](agents/design-your-agent/actions/tools/text-to-audio.md)
-    * [Visualize Everything](agents/design-your-agent/actions/tools/visualize-everything.md)
-  * [Control Flow](agents/design-your-agent/actions/control-flow/README.md)
-    * [If-Else](agents/design-your-agent/actions/control-flow/if-else.md)
-    * [Loop-Until](agents/design-your-agent/actions/control-flow/loop-until.md)
-    * [Map-Reduce](agents/design-your-agent/actions/control-flow/map-reduce.md)
-    * [Early-Return](agents/design-your-agent/actions/control-flow/early-return.md)
-* [Test Your Agent](developers/test-your-agent/README.md)
-  * [Overview](agents/test-your-agent/overview.md)
-  * [Datasets](agents/test-your-agent/datasets.md)
-  * [Playground](agents/test-your-agent/playground.md)
-  * [Runs](agents/test-your-agent/runs.md)
-* [Deploy Your Agent](agents/deploy-your-agent.md)
-* [Agent API](agents/deploy-your-agent.md)
+## 知识库
 
-## Knowledge
-
-* [Overview](knowledge/overview.md)
-* [Quick Start](knowledge/quick-start.md)
-* [Knowledge Types](knowledge/knowledge-types.md)
+- [概要](knowledge/overview.md)
+- [快速上手](knowledge/quick-start.md)
+- [知识文档类型](knowledge/knowledge-types.md)
 
 ## API
 
-* [Overview](assistant/overview.md)
-* [Agent](assistant/api.md)
-* [Thread](assistant/thread.md)
-* [Message](assistant/message.md)
-* [File](assistant/file.md)
+- [概要](assistant/overview.md)
+- [代理API](assistant/api.md)
+- [线程操作](assistant/thread.md)
+- [消息操作](assistant/message.md)
+- [文件操作](assistant/file.md)
 
-## Pricing
-* [Pricing](pricing/overview.md)
+<!-- ## 価格
 
-## Contact the Rebyte team?
+- [価格](pricing/overview.md) -->
+
+<!-- ## imprai チームへの -->
