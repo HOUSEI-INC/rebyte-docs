@@ -1,19 +1,19 @@
-# Assistant
+# 团队助手使用
 
 ## Revia
 
-Each team contains one super assistant called **Revia**, it's a universal assistant that can be used by all team members to interact with the AI assistant. **Revia** is created when the team is created, and it's always available to all team members. 
+每个团队都包含1个名为**Revia**的超级助手。这是所有团队成员都可以用来与AI助手对话的通用助手。Revia在团队创建的同时创建，所有团队成员随时都可以使用。
 
-## Other Assistants
+## 其他助手
 
-Team can also create other assistants, which are similar to **Revia** but with more focus on specific tasks. For example, you can create an assistant that helps with data analysis, or an assistant that helps with document generation.
+团队也可以创建其他助手。这些与Revia相似，但根据特定任务进行聚焦。例如，可以制作支持数据分析的助手和支持文件生成的助手。
 
-## Create Assistant
+## 助手搭建
 
-You need to be a builder or owner of a team to create an assistant. 
-The following information is required to create an assistant:
-* Assistant Name: will be shown in conversation history
-* Assistant Instruction: explain what the assistant can do, what's objective of the assistant, what's the assistant's objective etc. Rebyte will use this information to generate response specific to the assistant. 
-* Assistant Homepage: markdown formatted text that will be shown in assistant's homepage, visible to all users of the assistant. Typically, this is used to provide instructions on how to use the assistant.
-* Available Agents: list of agents that the assistant can use. Agent could be built by your team or from Rebyte's agent marketplace. 
-* Visibility: whether the assistant is visible to all team members or only to the creator.
+为了创建助手，需要成为团队的开发者或所有者。制作助手所需的信息如下：
+
+* 助手名：显示在对话记录中
+* 助手的说明：说明助手能做什么，助手的目的是什么等。**英璞来**使用这个信息，生成助手固有的响应。
+* 助理的主页：以Markdown格式的文本，显示在助理的主页上。会显示给助手的所有用户。通常，这个用于说明助手的使用方法。
+* 可用的代理：助手可以使用的代理列表。
+* 可见性：设置助手是显示给所有团队成员，还是只显示给制作者。

@@ -1,36 +1,34 @@
-# User and Team
+# 用户与团队
 
-## Team Overview
+## 团队概要
 
 <figure><img src="../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
 
-## User
+## 用户
 
-Currently, Rebyte support the following login methods:
+目前，imprai支持一下登陆方法：
 
 * Email
-* Google
-* Github
 
-Rebyte uses email as the primary identifier for a user. Notably, GitHub does not provide **verifed email**, so if you log in with GitHub, you will be asked to provide an email address.
+imprai将邮件作为用户的标识符使用。
 
-## Team
+## 团队
 
-Team is a concept that allows multiple users in same organization to collaborate on the same knowledge/agent/assistant, also enforce access control. Team can have multiple members, and each member can have different access level. Each login user has one default team, named after the user's display name, for example, if your display name is "John Smith", then your default team name will be "John Smith's Personal Team".
+团队是同一组织内的多个用户以相同的知识、代理、助手进行协作，实施访问控制的概念。团队中存在多个成员，每个成员都可以拥有不同的访问级别。每个登录用户都有1个以用户显示名称命名的默认团队。例如，显示名称为“A”时，默认的团队名称为“A的个人团队”。
 
-For example, if you are a developer in a company, you can create a team called "ACME" and invite your colleagues to join the team. Then you can create knowledge and agent under the team, and all your colleagues can access the knowledge and agent.
+例如，如果你是企业的开发者，你可以创建一个名为“ACME”的团队，邀请同事加入团队。之后，在团队下创建知识和代理，所有同事都可以访问该知识库和代理。
 
-* User can belong to multiple teams, he can change his default team in the team switcher in upper left corner of the UI.
-* Each team has its own API Key, which can be used to access all agents and knowledge that belongs to the team.
-* Team has a unique ID to identify the team, you can find the team ID in the team settings page. Team ID is particularly useful when you want to use ReByte via SDK.
+* 用户可以加入多个团队。在UI左上角的团队选择画面中可以更改默认的团队。
+* 每个团队都有自己的API密钥，可用于访问属于团队的所有代理和知识。
+* 团队有唯一的ID，可以在团队设置页面确认团队ID。团队ID特别有助于通过SDK使用imprai。
 
-#### Role
+## 角色
 
-Each member in a team has a role, which determines the access level of the member. There are 4 roles in a team:
+团队内的每个成员都有角色，这决定了成员的访问权限。团队有4种角色：
 
-* **Owner**: User who sets up the team is the owner of the team, he has full access to the team, he can invite new members, change team settings, and access all agents and knowledge in the team.
-* **Admin**: Owner has full access to the team, he can invite new members, change team settings, and access all agents and knowledge in the team.
-* **Builder**: Builder can access create agents/knowledge/assistants in the team, but builder cannot change team settings or invite new members.
-* **User**: User can access assistant created by the team, User can also contribute knowledge to shared knowledge base. Other than that, User cannot access agents or change team settings.
+* 所有者：设置团队的用户成为团队的所有者，拥有团队的完全访问权限。所有者能够邀请新成员，更改团队设置，可以访问团队中的所有代理和知识。
+* 管理员：拥有团队的完全访问权限，能够邀请新成员，更改团队设置，可以访问团队中的所有代理和知识。
+* 开发者：开发者可以在团队中创建代理、知识和助手，但不能更改团队设置或邀请新成员。
+* 用户：用户可以访问团队创建的助手，可以为共享知识库提供知识。除此之外，不能访问代理，也不能更改团队设置。
 
 [//]: # (see also: [Access Control]&#40;access-control.md&#41; for more details.)
