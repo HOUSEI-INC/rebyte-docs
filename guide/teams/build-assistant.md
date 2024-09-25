@@ -1,30 +1,30 @@
-## Config **Revia**
+## 配置 **Revia**
 
-Each team has exact one **Revia** assistant, which is the main interface for team members to interact with the AI assistant. You can config **Revia**'s behavior by clicking the **Config Revia** button in the top right corner of the UI, only builder and admin can config **Revia**.
+每个团队都有一个且仅有一个 **Revia** 助手,它是团队成员与AI助手交互的主要界面。您可以通过点击用户界面右上角的 **配置Revia** 按钮来配置 **Revia** 的行为,只有构建者和管理员可以配置 **Revia**。
 
-## Build More Assistants
-Besides **Revia**, you can build more assistants to help your team. To build a new assistant, click the **Create Assistant** button in the top right corner of the UI, then follow the steps to create a new assistant. You can also invite other team members to join the assistant, so they can collaborate on the assistant with you.
+## 构建更多助手
+除了 **Revia**,您还可以构建更多助手来帮助您的团队。要构建新的助手,请点击用户界面右上角的 **创建助手** 按钮,然后按照步骤创建新的助手。您还可以邀请其他团队成员加入助手,以便他们可以与您一起协作开发助手。
 
-## Configurations
+## 配置
 
-There are several configurations you can set for your assistant, we only emphasize the most important configurations here.
+您可以为助手设置几种配置,这里我们只强调最重要的配置。
 
-### Instructions
-Describe what you want the assistant to do. We will use this information in various places, such as making responsees more specific to your needs, or do query planning based on your instructions.
-We recommend you to write simple but clear instructions, so that the assistant can better understand your needs. For example, if you want the assistant to help you with data analysis, you can write:
+### 指令
+描述您希望助手做什么。我们将在各个地方使用这些信息,例如使响应更具体地满足您的需求,或根据您的指令进行查询规划。
+我们建议您编写简单但清晰的指令,以便助手能更好地理解您的需求。例如,如果您希望助手帮助您进行数据分析,您可以这样写:
 
-- analysis sales data stored in database xxx
-- generate a report based on the sales data
+- 分析存储在数据库xxx中的销售数据
+- 根据销售数据生成报告
 
-### Agents available to the assistant
-This is the most important configuration for your assistant. You can select agents that you want to be available to the assistant. The assistant can use these agents to perform tasks for you. For example, if you want the assistant to help you with data analysis, you can select agents that can read data from your database, generate reports, and plot graphs.
-There're two categories of agents:
-** Agents made by you or your team members
-- pros: you can customize the agents to fit your needs
-- cons: you need to spend time building the agents
+### 助手可用的代理
+这是助手最重要的配置。您可以选择希望助手可用的代理。助手可以使用这些代理为您执行任务。例如,如果您希望助手帮助您进行数据分析,您可以选择能够从数据库读取数据、生成报告和绘制图表的代理。
+代理分为两类:
+** 您或您的团队成员制作的代理
+- 优点:您可以自定义代理以满足您的需求
+- 缺点:您需要花时间构建代理
 
-** Agents made by Rebyte System
-- pros: you can use the agents immediately without building them, we will keep updating the agents to make them more powerful
-- cons: you may not modify the agents to fit your needs
+** Rebyte系统制作的代理
+- 优点:您可以立即使用这些代理,无需构建它们,我们会持续更新代理以使其更强大
+- 缺点:您可能无法修改代理以满足您的特定需求
 
-All system agents are open source, you clone the agent to your team and modify it to fit your needs.
+所有系统代理都是开源的,您可以将代理克隆到您的团队并修改它以满足您的需求。

@@ -1,40 +1,40 @@
-# Access Control
+# 访问控制
 
-Rebyte is built with fine-grained access control. You can control the visibility of your agents, knowledge, assistant and other resources in Rebyte. We believe that this is of vital importance for collaboration and sharing AI applications in enterprise environments.
+Rebyte 建立在细粒度的访问控制基础之上。您可以控制 Rebyte 中您的代理、知识库、助手和其他资源的可见性。我们认为这对于企业环境中的协作和共享 AI 应用至关重要。
 
-## Rules
+## 规则
 
-There are three types of users regarding access control:
+关于访问控制,有三类用户:
 
-* **Builders** (builder/admin/owner of a team): develop and maintain the team's agents, knowledge, and apps.
+* **构建者**（团队的构建者/管理员/所有者）：开发和维护团队的代理、知识库和应用。
 
-* **Users**: use assistants created by the team.
+* **用户**：使用团队创建的助手。
 
-* **External Users**: Rebyte users who are not part of the team.
+* **外部用户**：不属于团队的 Rebyte 用户。
 
-Builders can develop, design, and use the agents, knowledge, and assistants within the team. Users can view and use the assistants created by the team. External users can view and use the agents, knowledge, and apps that are set to External Public.
+构建者可以在团队内开发、设计和使用代理、知识库和助手。用户可以查看和使用团队创建的助手。外部用户可以查看和使用设置为外部公开的代理、知识库和应用。
 
-Regarding agents, users can view all agents' workflows and datasets within the team and can copy them to their personal accounts to modify and run. When an agent is set to External Unlisted, users outside the team can use a link to view the agent. When an agent is set to Public, it appears in the team agent list for external users.
+关于代理,用户可以查看团队内所有代理的工作流程和数据集,并可以将它们复制到个人账户进行修改和运行。当代理设置为外部未列出时,团队外的用户可以通过链接查看该代理。当代理设置为公开时,它会出现在外部用户的团队代理列表中。
 
-Regarding knowledge, it can be set so only admins and owners can create knowledge, while builders can maintain it. External Public set knowledge can be viewed by users outside the team.
+关于知识库,可以设置为只有管理员和所有者可以创建知识库,而构建者可以维护它。设置为外部公开的知识库可以被团队外的用户查看。
 
-Regarding apps, there are four access-levels. Private apps can only be seen by builders, which is useful for maintaining apps that are still under development.team Unlisted apps can be accessed and used by team users via a link. Apps set to Team Public can be viewed and used by all team members on the team app page. External Public means that users outside the team can also view and use the app.
+关于应用,有四种访问级别。私有应用只能被构建者看到,这对于维护仍在开发中的应用很有用。团队未列出的应用可以通过链接被团队用户访问和使用。设置为团队公开的应用可以在团队应用页面上被所有团队成员查看和使用。外部公开意味着团队外的用户也可以查看和使用该应用。
 
-For example, in an administrative team, the owner and admin manage the team's resources, builders are responsible for designing and building agents, knowledge, and apps. And users are responsible for viewing and using the agents, knowledge, and apps designed by the builders. When an app is not yet complete, a builder can set its access-level to Private. Once the design is finished, it can be set to Team Public for team members to use. Setting it to External Public allows sharing with users outside the team.
+例如,在一个行政团队中,所有者和管理员管理团队的资源,构建者负责设计和构建代理、知识库和应用。而用户负责查看和使用构建者设计的代理、知识库和应用。当一个应用尚未完成时,构建者可以将其访问级别设置为私有。一旦设计完成,可以将其设置为团队公开供团队成员使用。将其设置为外部公开则允许与团队外的用户共享。
 
-Further details are available in the following table:
+更多详细信息请参见下表:
 
-| Team-Access       | Non-team user        | Team user（member）               | Team Builder（admin、owner）      |      |
-| ----------------- | -------------------- | --------------------------------- | --------------------------------- | ---- |
-| Team-App          |                      |                                   |                                   |      |
-| Private           |                      |                                   | list,use,edit,create              |      |
-| team Unlisted     |                      | Use with link                     | list,use,edit,create              |      |
-| team Public       |                      | list,use                          | list,use,edit,create              |      |
-| External Public   | list,use             | list,use                          | list,use,edit,create              |      |
-| Team-Knowledge    |                      |                                   |                                   |      |
-| External Public   | list,use             | list,use                          | list,use,edit,create(admin&owner) |      |
-| team Public       |                      | list,use                          | list,use,edit,create(admin&owner) |      |
-| Team-Agent        |                      |                                   |                                   |      |
-| team Public       |                      | list,view（design,dataset）,clone | list,view,edit,create             |      |
-| External Unlisted | view,clone with link | list,view,clone                   | list,view,edit,create             |      |
-| External Public   | list,view,clone      | list,view,clone                   | list,view,edit,create             |      |
+| 团队访问        | 非团队用户           | 团队用户（成员）                  | 团队构建者（管理员、所有者）       |
+| --------------- | -------------------- | --------------------------------- | ---------------------------------- |
+| 团队应用        |                      |                                   |                                    |
+| 私有            |                      |                                   | 列表,使用,编辑,创建                |
+| 团队未列出      |                      | 通过链接使用                      | 列表,使用,编辑,创建                |
+| 团队公开        |                      | 列表,使用                         | 列表,使用,编辑,创建                |
+| 外部公开        | 列表,使用            | 列表,使用                         | 列表,使用,编辑,创建                |
+| 团队知识库      |                      |                                   |                                    |
+| 外部公开        | 列表,使用            | 列表,使用                         | 列表,使用,编辑,创建(管理员&所有者) |
+| 团队公开        |                      | 列表,使用                         | 列表,使用,编辑,创建(管理员&所有者) |
+| 团队代理        |                      |                                   |                                    |
+| 团队公开        |                      | 列表,查看（设计,数据集）,克隆     | 列表,查看,编辑,创建                |
+| 外部未列出      | 通过链接查看,克隆    | 列表,查看,克隆                    | 列表,查看,编辑,创建                |
+| 外部公开        | 列表,查看,克隆       | 列表,查看,克隆                    | 列表,查看,编辑,创建                |
