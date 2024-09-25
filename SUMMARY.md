@@ -20,7 +20,7 @@
 - [参考输出格式](agents/design-your-agent/reference-action-output.md)
 <!-- - [代理部署](agents/deploy-your-agent.md) -->
 - [代理工具样例](agents/example-tool.md)
-- [操作](agents/design-your-agent/actions/README.md)
+- [动作](agents/design-your-agent/actions/README.md)
   - [输入](agents/design-your-agent/actions/input.md)
   - [输出](agents/design-your-agent/actions/output.md)
   - [模型](agents/design-your-agent/actions/model/README.md)

@@ -1,19 +1,21 @@
-# Rebyte One Pager
+# 英璞来简介
 
-Rebyte contains two things:
-* **Revia**: An AI Assistant for your team members. You can think of it as a private Chatgpt with your team's private knowledge and workflow.
-* **Builder Platform**: Builder in your team can capture your team's proprietary knowledge and workflow, and make them available to **Revia**.
+**英璞来**包含2个主要部分：
+- **Revia**：面向团队成员的AI助手。这可以被认为是拥有团队私人知识和工作流程的私人ChatGPT。
+- 开发者平台：团队内的建设者可以掌握团队固有的知识和工作流程，并在**Revia**上使用。
 
 ## Revia
-**Revia** is a universal user interface that can be used by all team members to interact with the AI assistant. This interface is designed to handle various types of tasks, such as data retrieval, question and answer, document generation, and data analysis, and more advanced tasks such as interactive chart and table, form filling and more.
+**Revia**是所有团队成员都可以与AI助手对话的通用用户界面。该界面旨在处理不同类型的任务，如数据获取、问答、文档生成、数据分析、交互式图表和表格、表格填写等。
+除了**Revia**之外，团队管理员还可以构建专门针对特定用例的其他助手（例如：客户支持助理、销售助理、营销助理等）。
+**Revia**和其他助手的关系类似于**ChatGPT**和**GPTs**的关系。
 
-Besides Revia, team admin can build other assistants specific to some use cases, for example, a customer support assistant, a sales assistant, a marketing assistant, etc.
+{% embed url="https://www.youtube.com/watch?v=mZL7D5-1w_0" %}
 
-The relationship between **Revia** and **Other Assistants** is like the relationship between **ChatGpt** and **Gpts**.
+## 开发者平台
+只有团队中的开发者或管理者才能访问开发者平台。开发者平台的主要组件如下：
+- **动作**：表示代理可以执行的单一工作单位。例如，执行大模型调用、读取文件、生成文档、执行代码、调用外部服务等。动作可以连锁，形成一系列动作，创建代理执行的序列。
+- **代理**：用无代码UI来描述专有工作流程，表示一系列动作。
+- **知识**：从各种企业来源汇总、嵌入数据，使代理能够使用的数据管道。
+- **API**：因为上述所有可以通过API访问，所以可以整合现有的系统和**英璞来**。
+  
 
-## Builder Platform
-Only builders or admin in your team can access the builder platform. Those are main components in the builder platform:
-* **Actions**: represent a single unit of work that an agent can perform, such as make a LLM call, read a file, or generate a document, run piece of code, call external services etc. Actions can be chained together to form a sequence of actions that the agent will perform.
-* **Agents**: a no-code UI for capturing proprietary workflow, it represents a sequence of actions.
-* **Knowledge** : a data pipeline for aggregating data from various enterprise sources, embedding them, and making them available to agents.
-* **API**: all mentioned above can be accessed via API, so you can integrate Rebyte with your existing systems.

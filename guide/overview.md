@@ -1,78 +1,77 @@
-# Overview
+# 概要
 
-## What is ReByte?
+## 英璞来是什么？
 
-Rebyte is an AI-powered platform leveraging GPT4, Claude, Gemini, and Mistral to enhance team collaboration and productivity. Utilize AI assistants to gain deeper insights into any subject, streamline work processes, and boost overall efficiency. Whether you need assistance with company-related inquiries, drafting documents, or simplifying complex tasks, Rebyte's AI assistants have you covered. Create personalized assistants or collaborate with your team on shared assistants tailored to your specific needs.
-
+**英璞来**是一个利用GPT-4、Claude、Gemini和Mistral提高团队协作和生产力的AI平台。利用AI助手，用户对于各种主题能够获得深刻的见解，使工作流程合理化，提高整体效率。**英璞来**的AI助手同样支持企业相关咨询、文档制作、复杂任务简化等。此外用户可以创建个性化的助手，也可以与团队合作创建符合特定需求的共享助手。
 
 <figure><img src="../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
 
-## General concepts
+## 通用概念介绍
 
-### Assistants
+### 助手
 
-Rebyte assistants are AI-powered agents that can do planning, reasoning, and execution. They can help with a wide range of tasks, from answering questions to creating documents specific to company's data. Assistants can leverage customized agents built by your team to provide more tailored responses.
+**英璞来**的助手是进行计划、推理、执行的AI代理，从回答问题到根据公司数据制作文件，能够完成各种任务。助理利用团队构建的定制代理，提供更具体、更恰当的答复结果。
 
-Here are some typical tasks that assistants can help with:
+AI助手的常见应用场景如下:
 
-* Answering questions about your company, for example, financial data or company policies.
-* Drafting documents, such as memos or reports, based on your company's data as well as public information.
-* Providing insights into customer behavior or market trends, extract data from your company's data sources, and plot graphs or tables based on the data.
-* Professional Translation, translate document to target language with multiple rounds of proofreading and editing.
+* 对企业财务数据和企业方针等相关问题的回应
+* 制作备忘录和报告等，以及根据公司数据和公开信息制作文件
+* 提供有关客户动向和市场动向的见解，从公司数据源中提取数据，制作图表和表格
+* 通过多次校对和编辑将文件翻译成目标语言
 
-If you are familiar with the concept of chatgpt, Rebyte assistants are similar to GPTs but with more focus on team productivity and collaboration.
+熟悉ChatGPT概念的朋友可能会认为**英璞来**的AI助手与GPT相似，但**英璞来**更专注于团队协作的生产力提升。
 
-### Agents
+### 代理
 
-Agents are building blocks for assistants. They can be customized to perform specific tasks, such as data retrieval, document generation, or data analysis, main idea behind agent is to capture proprietary knowledge and automate repetitive tasks within your organization.
+代理人是助手的构成要素，可以定制执行数据获取、文件生成、数据分析等特定任务。代理的主要目的是吸收自己的知识，使组织内的重复性任务自动化。
 
-Here are some example agents:
+以下是代理人的例子：
 
-* Answering questions about your company's financial data from a predefined xlsx file
-* Analyzing market trends from some Twitter accounts
-* Call internal APIs to retrieve data from your company's database
+* 从事先定义的xlsx文件中总结出企业财务数据相关问题的回应
+* 根据推特账户分析市场动向
+* 从企业数据库中获取数据的内部API调用
 
-You can think of agents as a way to encapsulate your company's knowledge and processes into reusable components that can be used by your assistants. Agent concept is similar to the concept of "skills" or "tools" in other AI assistant platforms, or flow engineering.
+代理可以将其作为可重复使用的组件封装公司知识和流程，并作为助手使用。代理的概念与其他AI助手平台和流程工程中的“技能”和“代理”概念相似。
 
-### Actions
+### 动作
 
-Action is a building block of an agent. Action is a single unit of work that an agent can perform, such as make a LLM call, read a file, or generate a document, run piece of code, etc. Actions can be chained together to form a sequence of actions that the agent will perform.
+动作是代理的构成要素，是代理可以执行的单一工作单位。例如，LLM调用、文件读取、文件生成、代码执行等。动作可以连锁，形成代理执行的动作序列。
 
-Here are builtin actions that Rebyte supports:
+**英璞来**支持的嵌入式动作如下：
 
-* Call LLM
-* Internet Search
-* Load History messages
-* Load Dataset
-* Knowledge Search over vector database
-* Parse file to structured data
-* Run JS code
-* Loop until
-* If-else
-* Map-Reduce for parallel processing
+* 大模型调用
+* 网页搜索
+* 导入历史信息
+* 数据集的读取
+* 向量数据库上的知识搜索
+* 将文件解析为结构化数据
+* JS代码的执行
+* 循环处理
+* if-else
+* Map-Reduce并行进程
 
-With extension API, you can create your own actions to perform custom tasks that are specific to your organization.
+用户可以使用扩展API创建执行组织固有的自定义任务的独立操作。
 
-### Knowledge
 
-Knowledge is the data that your agents and assistants can access. It can be your company's data, such as Notion pages, Google Drive files, or local files, as well as public data sources like Wikipedia or news websites. Knowledge is the foundation for your agents and assistants to provide accurate and relevant information.
+### 知识库
 
-Currently, Rebyte supports the following data sources:
+知识是代理和助手可以访问的数据。这包括Notion、Google Drive文件、本地文件等企业数据，以及Wikipedia和新闻网站等公共数据源。知识是代理和助理提供准确且相关信息的基础。
 
-* Local files
-* Web pages
+目前**英璞来**支持一下数据源:
+
+* 本地文件
+* web页面
 * Discord
 * Twitter
 * Notion
-* Google Drive
+* Google云盘
 * GitHub
 
-Rebyte use LLM embeddings to convert data into a format that can be used by agents and assistants. Currently, Rebyte supports the two following embedding providers:
+**英璞来**使用大模型嵌入方法将数九转化为代理和助手能够理解的格式。目前**英璞来**支持一下嵌入格式：
 
 * OpenAI embeddings
 * Voyager embeddings
 
-### Team
+### 团队
 
-The team is a group of users who collaborate on Rebyte. Each team has its own space where members can create and share assistants, agents, and knowledge. Team members can have different roles, such as admin, builder, or user, with varying permissions to manage and access the workspace.
-
+团队是在**英璞来**上协作的用户组。每个团队都有自己的空间，成员可以创建和共享助手、代理和知识。团队成员具有管理员、开发者、用户等不同的角色，拥有管理工作空间管理和访问的各种权限。
