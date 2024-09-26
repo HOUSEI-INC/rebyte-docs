@@ -1,26 +1,26 @@
-# Knowledge Types
+# 知识库类型
 
-Many data sources are supported, including: local files, Notion, Github, Discord, etc.
+支持多种数据源,包括:本地文件、Notion、Github、Discord等。
 
-## Local files
+## 本地文件
 
-You can upload your files and store them in the knowledge. 
+您可以上传文件并将它们存储在知识库中。
 
-Supports files types: DOC, DOCX, IMG, EPUB, JPEG, JPG, PNG, XLS, XLSX, PPT, PPTX, MD, TXT, RTF, MD, TXT, RTF, RST, PDF, JSON, HTML, EML
+支持的文件类型: DOC, DOCX, IMG, EPUB, JPEG, JPG, PNG, XLS, XLSX, PPT, PPTX, MD, TXT, RTF, MD, TXT, RTF, RST, PDF, JSON, HTML, EML
 
 ## Notion
 
-Connect your Notion account and import your Notion pages into the knowledge.
+连接您的Notion账户并将Notion页面导入到知识库中。
 
-* Choose Notion as the data source for your knowledge.
+* 选择Notion作为您知识库的数据源。
 
 <figure><img src="../images/notion.png" alt="notion"></figure>
 
-* In the pop-up page, login to your Notion account and choose the pages you want to import into your knowledge.
+* 在弹出页面中,登录您的Notion账户并选择您想要导入到知识库的页面。
 
 <figure><img src="../images/notion-2.png" alt="notion-2"></figure>
 
-* We stay synced with Notion, makingå sure the content is updated in time.
+* 我们与Notion保持同步,确保内容及时更新。
 
 <figure><img src="../images/notion-3.png" alt="notion-3"></figure>
 

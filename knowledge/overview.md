@@ -1,16 +1,16 @@
-# Knowledge
+# 知识库
 
-In ReByte, we provide knowledge base capability, enabling agents to interact with your private data. Users can store and manage their personal data in the knowledge. 
+在ReByte中,我们提供知识库功能,使代理能够与您的私有数据进行交互。用户可以在知识库中存储和管理他们的个人数据。
 
-Many data sources are supported, including: local files, notion, github, discord, etc.
+支持多种数据源,包括:本地文件、Notion、GitHub、Discord等。
 
-## How Knowledge Works?
+## 知识库如何工作?
 
-### Document
+### 文档
 
-Each knowledge contains a list of documents, each document is identified by a unique document id within the knowledge.
+每个知识库包含一系列文档,每个文档在知识库内由唯一的文档ID标识。
 
-### Chunk
+### 分块
 
-Document will be chunked into many chunks, each chunk identified by a unique chunk id within the document. Chunks will be sent to LLM embedding service to get the embedding vector.
-When creating knowledge, user can specify the chunk size, which will determine how many chunks a document will have. Typically, chunk size range from a hundred to a few thousand tokens.
+文档将被分割成多个块,每个块在文档内由唯一的块ID标识。这些块将被发送到LLM嵌入服务以获取嵌入向量。
+创建知识库时,用户可以指定块大小,这将决定一个文档会有多少个块。通常,块大小范围从一百到几千个标记不等。

@@ -1,33 +1,31 @@
-# Agent API
+# 代理API
 
-The Agent API allows you to build AI agent within your own applications. It provides a set of APIs to interact with the agent, such as sending messages, uploading files, and creating threads.
+代理API允许您在自己的应用程序中构建AI代理。它提供了一套API来与代理交互,例如发送消息、上传文件和创建线程。
 
-## Overview
+## 概述
 
-A typical integration of the Agent API has the following flow:
+代理API的典型集成流程如下:
 
-1. Create an Agent on rebyte Agent editor by defining its custom actions, such as `Model`, `Data`, `Tools`, `Control Flow`, etc. Pick the model and parameters that you want to use.
+1. 在rebyte代理编辑器上创建一个代理,定义其自定义动作,如`模型`、`数据`、`工具`、`控制流`等。选择您想要使用的模型和参数。
 
-2. Create a Thread when a user starts a conversation.
+2. 当用户开始对话时创建一个线程。
 
-3. Add Messages to the Thread as the user asks questions.
+3. 随着用户提问,向线程添加消息。
 
-4. Run the Agent on the Thread to generate a response.
+4. 在线程上运行代理以生成响应。
 
-## Step by step
+## 步骤详解
 
-1. Create an Agent.
+1. 创建代理。
 
-Here, we'll just use this ["Chat with GPT3.5 agent"](https://rebyte.ai/p/21b2295005587a5375d8/callable/f4222f209267e5b24cda/editor) as an example. Remember to test your agent first and make sure it works as expected. Also, click "Deploy" to make it available for the API.
+这里,我们将使用["Chat with GPT3.5 agent"](https://rebyte.ai/p/21b2295005587a5375d8/callable/f4222f209267e5b24cda/editor)作为示例。记得先测试您的代理,确保它按预期工作。同时,点击"部署"使其可通过API使用。
 
-2. Create a thread
+2. 创建线程
 
-Before using the API, get your API key from the API console on the sidebar. You should use this key to authenticate your requests.
+在使用API之前,从侧边栏的API控制台获取您的API密钥。您应该使用此密钥来验证您的请求。
 
-
-When creating a thread, you can append the messages to the thread when creating it.
-You can also attach metadata to the thread. This can be useful for storing additional information about the object in a structured format.
-
+创建线程时,您可以在创建时将消息附加到线程。
+您还可以为线程附加元数据。这对于以结构化格式存储对象的附加信息很有用。
 
 ```shell
 curl 'https://rebyte.ai/api/sdk/threads' \

@@ -1,16 +1,16 @@
-# Thread
+# 线程
 
-## Create thread
+## 创建线程
 
-`POST https://rebyte.ai/api/sdk/threads`
+`POST https://rebyte.ai/api/sdk/threads`
 
-Create a new thread.
+创建一个新的线程。
 
-**Request body**
-* messages: An array of messages to start the thread with.
-* metadata: Set of 16 key-value pairs that can be attached to an object. This can be useful for storing additional information about the object in a structured format. Keys can be a maximum of 64 characters long and values can be a maxium of 512 characters long.
+**请求体**
+* messages: 用于启动线程的消息数组。
+* metadata: 可以附加到对象的16个键值对集合。这对于以结构化格式存储对象的附加信息很有用。键的最大长度为64个字符,值的最大长度为512个字符。
 
-**Example Request**
+**请求示例**
 
 ```shell
 curl 'https://rebyte.ai/api/sdk/threads' \
@@ -24,11 +24,11 @@ curl 'https://rebyte.ai/api/sdk/threads' \
 }'
 ```
 
-**Return**
+**返回**
 
-A thread object.
+一个线程对象。
 
-**Example**
+**示例**
 ```json
 {
     "id": "2hWVPNfrHv1IiVN7ia-4P",
@@ -40,21 +40,19 @@ A thread object.
 ```
 
 
-### List threads
+### 列出线程
 
-`GET https://rebyte.ai/api/sdk/threads`
+`GET https://rebyte.ai/api/sdk/threads`
 
-Get list of threads.
+获取线程列表。
 
-**Query parameters**
-* limit: An integer, with the maximum number of threads to return. Default is 20.
-* order: A string, with the order to return the threads. Default is desc.
-* before: A string, used as a cursor for use in pagination. after is an object ID that defines your place in the list.
-* after: A string, used as a cursor for use in pagination. before is an object ID that defines your place in the list.
+**查询参数**
+* limit: 一个整数,表示要返回的最大线程数。默认为20。
+* order: 一个字符串,表示返回线程的顺序。默认为desc。
+* before: 一个字符串,用作分页的游标。after是定义您在列表中位置的对象ID。
+* after: 一个字符串,用作分页的游标。before是定义您在列表中位置的对象ID。
 
-
-
-**Example Request**
+**请求示例**
 ```shell
 curl  'https://rebyte.ai/api/sdk/threads?limit=10&order=desc' \
 -H 'Content-Type: application/json' \
@@ -62,12 +60,11 @@ curl  'https://rebyte.ai/api/sdk/threads?limit=10&order=desc' \
 -H 'Cookie: NEXT_LOCALE=en'
 ```
 
-**Return**
+**返回**
 
-A list of thread objects.
+线程对象列表。
 
-
-**Example**
+**示例**
 ```json
 {
     "list": [
@@ -92,16 +89,16 @@ A list of thread objects.
     ]
 }
 ```
-### **Get thread**
+### **获取线程**
 
-`GET https://rebyte.ai/api/sdk/threads/{thread_id}`
+`GET https://rebyte.ai/api/sdk/threads/{thread_id}`
 
-Get a thread by id.
+通过ID获取线程。
 
-**Path parameters**
-* thread_id(required): A string, with the ID of the thread to retrieve.
+**路径参数**
+* thread_id(必需): 一个字符串,表示要检索的线程的ID。
 
-**Example Request**
+**请求示例**
 ```shell
 curl 'https://rebyte.ai/api/sdk/threads/{thread_id}' \
 -H 'Content-Type: application/json' \
@@ -109,10 +106,10 @@ curl 'https://rebyte.ai/api/sdk/threads/{thread_id}' \
 -H 'Cookie: NEXT_LOCALE=en'
 ```
 
-**Returns**
-The thread object matching the specified ID.
+**返回**
+与指定ID匹配的线程对象。
 
-**Example**
+**示例**
 ```json
 {
     "id": "cB1-_3wh5ZWtUPJU4xIuU",
@@ -124,19 +121,19 @@ The thread object matching the specified ID.
 }
 ```
 
-### **Update thread**
+### **更新线程**
 
-`POST https://rebyte.ai/api/sdk/threads/{thread_id}`
+`POST https://rebyte.ai/api/sdk/threads/{thread_id}`
 
-Update a thread.
+更新线程。
 
-**Path parameters**
-* thread_id(required): A string, with the ID of the thread to retrieve.
+**路径参数**
+* thread_id(必需): 一个字符串,表示要检索的线程的ID。
 
-**Request body**
-* metadata: Set of 16 key-value pairs that can be attached to an object. This can be useful for storing additional information about the object in a structured format. Keys can be a maximum of 64 characters long and values can be a maxium of 512 characters long.
+**请求体**
+* metadata: 可以附加到对象的16个键值对集合。这对于以结构化格式存储对象的附加信息很有用。键的最大长度为64个字符,值的最大长度为512个字符。
 
-**Example Request**
+**请求示例**
 ```shell
 curl 'https://rebyte.ai/api/sdk/threads/{thread_id}' \
 -H 'Content-Type: application/json' \
@@ -151,10 +148,10 @@ curl 'https://rebyte.ai/api/sdk/threads/{thread_id}' \
  }'
 ```
 
-**Returns**
-The modified thread object matching the specified ID.
+**返回**
+与指定ID匹配的修改后的线程对象。
 
-**Example**
+**示例**
 ```json
 {
     "id": "cB1-_3wh5ZWtUPJU4xIuU",

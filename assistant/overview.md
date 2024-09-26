@@ -1,17 +1,18 @@
-ReByte provides a set of APIs to make it easy to integrate ReByte into your own applications. There're three main APIs: File API, Agent API, and Thread API. 
+ReByte提供了一套API,使得将ReByte集成到您自己的应用程序中变得容易。主要有三个API:文件API、代理API和线程API。
 
-## Agent API
+## 代理API
 
-Agent API allows you to call the agent you created on ReByte. It supports:
+代理API允许您调用您在ReByte上创建的代理。它支持:
 
-* blocking and non-blocking calls
-* streaming
-* specifying agent version
-* specify config of action within agent
+* 阻塞和非阻塞调用
+* 流式传输
+* 指定代理版本
+* 指定代理内部动作的配置
 
-## Thread API
+## 线程API
 
-Thread API allows you to create a conversation thread and add messages to the thread. Combined with the Agent API, you can create an agent with memory without having your own backend.
+线程API允许您创建一个对话线程并向线程添加消息。结合代理API,您可以创建一个具有记忆功能的代理,而无需自己的后端。
 
-## File API
-File API allows you to upload files to ReByte. Uploaded files can be used in the agent's actions, such as `File Loader` action.
+## 文件API
+
+文件API允许您将文件上传到ReByte。上传的文件可以在代理的动作中使用,例如`文件加载器`动作。

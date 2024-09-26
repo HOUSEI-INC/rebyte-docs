@@ -1,52 +1,52 @@
-# Files
+# 文件
 
-## Upload file
+## 上传文件
 
 `POST https://rebyte.ai/api/sdk/files`
 
-Upload a file that can be used across various endpoints.
+上传可在各种端点使用的文件。
 
-**Request Body**
+**请求体**
 
-* file(required): File object to be uploaded.
+* file(必需): 要上传的文件对象。
 
-**Example Request**
+**请求示例**
 ```shell
 curl 'https://rebyte.ai/api/sdk/files' \
   -H "Authorization: Bearer $REBYTE_KEY" \
   -F file="@mydata.jsonl"
 ```
 
-**Return**
+**返回**
 
-Returns an object with message, fileId and path.
+返回一个包含消息、文件ID和路径的对象。
 
-**Response**
+**响应**
 ```json
 {
-    "message": "upload file success",
+    "message": "上传文件成功",
     "fileId": "09343664-****-****-a4e5-02aa25d15b54",
     "path": "1b242a2dea62c6******/09343664-****-4d43-a4e5-02aa25d15b54"
 }
 ```
 
-## List files 
+## 列出文件
 
 `GET https://rebyte.ai/api/sdk/files`
 
-Get list of files.
+获取文件列表。
 
-**Example Request**
+**请求示例**
 ```shell
 curl 'https://rebyte.ai/api/sdk/files' \
   -H "Authorization: Bearer $REBYTE_KEY"
 ```
 
-**Return**
+**返回**
 
-Returns a list of files.
+返回文件列表。
 
-**Response**
+**响应**
 ```json
 {
     "files": [
@@ -70,23 +70,23 @@ Returns a list of files.
 }
 ```
 
-## Retrieve file
+## 检索文件
 
 `GET https://rebyte.ai/api/sdk/files/{fileId}`
 
-Retrieve file by fileId.
+通过文件ID检索文件。
 
-**Example Request**
+**请求示例**
 ```shell
-curl 'https://rebyte.ai/api/sdk/files/{fileId}'' \
+curl 'https://rebyte.ai/api/sdk/files/{fileId}' \
   -H "Authorization: Bearer $REBYTE_KEY" \
 ```
 
-**Return**
+**返回**
 
-Returns a file object.
+返回一个文件对象。
 
-**Response**
+**响应**
 ```json
 {
     "file": {
@@ -100,47 +100,47 @@ Returns a file object.
 }
 ```
 
-## Retrieve file content
+## 检索文件内容
 
 `GET https://rebyte.ai/api/sdk/files/{fileId}/content`
 
-Retrieve file content by fileId.
+通过文件ID检索文件内容。
 
-**Example Request**
+**请求示例**
 ```shell
 curl 'https://rebyte.ai/api/sdk/files/{fileId}' \
   -H "Authorization: Bearer $REBYTE_KEY" \
 ```
 
-**Return**
+**返回**
 
-Returns the content of the file.
+返回文件的内容。
 
-**Response**
+**响应**
 ```json
-content of the file...
+文件的内容...
 ```
 
-## Delete file
+## 删除文件
 
 `DELETE https://rebyte.ai/api/sdk/files/{fileId}`
 
-Delete file by fileId.
+通过文件ID删除文件。
 
-**Example Request**
+**请求示例**
 ```shell
 curl --location --request DELETE 'https://rebyte.ai/api/sdk/files/{file_id}' \
 --H 'Authorization: Bearer $REBYTE_KEY'
 ```
 
-**Return**
+**返回**
 
-Returns a message object.
+返回一个消息对象。
 
-**Response**
+**响应**
 ```json
 {
-    "message": "deleted",
+    "message": "已删除",
     "fileId": "09343664-ddb2-4d43-a4e5-02aa25d15b54"
 }
 ```
