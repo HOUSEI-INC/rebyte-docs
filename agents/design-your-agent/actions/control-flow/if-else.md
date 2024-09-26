@@ -1,21 +1,21 @@
-# If Else
+# 如果-否则
 
-The `If Else` action allows you to run actions conditionally.
+`如果-否则`动作允许你有条件地运行动作。
 
-## Usage
+## 使用方法
 
-* Add an `If Else` action to your agent, and you will see two blocks with the same name ("IF_ELSE_1" for example) being added to the action. 
+* 向你的代理添加一个`如果-否则`动作，你会看到两个具有相同名称的块（例如"IF_ELSE_1"）被添加到动作中。
 
 <figure><img src="../../../../images/if.png"></figure>
   
-* Fill in the condition in Javascript format. This function should return a boolean value.
+* 以 Javascript 格式填写条件。这个函数应该返回一个布尔值。
 
-<figure><img src="../../../../images/if-2.png"></figure
+<figure><img src="../../../../images/if-2.png"></figure>
   
-* During execution, the system will judge if the condition is true. If so, the actions between the first and the second `If_Else` block will be executed. Otherwise, the execution will jump to after the second `If_Else` block.
+* 在执行过程中，系统将判断条件是否为真。如果是，第一个和第二个`如果-否则`块之间的动作将被执行。否则，执行将跳到第二个`如果-否则`块之后。
 
-* * **NOTE**: The "If Else" action's results are arrays. Make sure to use formats like `env.state.LOOP_1[0]` or `{{LOOP_1[0]}}`.
+* **注意**："如果-否则"动作的结果是数组。确保使用像 `env.state.LOOP_1[0]` 或 `{{LOOP_1[0]}}` 这样的格式。
 
-## Example Agent
+## 示例代理
 
-* [If Else Agent](https://rebyte.ai/p/21b2295005587a5375d8/callable/f6f55d6029c8a0aedd53/editor)
+* [如果-否则代理](https://rebyte.ai/p/21b2295005587a5375d8/callable/f6f55d6029c8a0aedd53/editor)

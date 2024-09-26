@@ -1,23 +1,22 @@
-# Http Request Maker
+# HTTP 请求制作器
 
-### Description
+### 描述
 
-This module supports making requests to specific URLs and retrieving results.
+该模块支持向特定 URL 发送请求并获取结果。
 
-
-### Parameters
-- Type
+### 参数
+- 类型
 	- POST
 	- GET
-- Protocol
+- 协议
 	- HTTP
 	- HTTPS
-- Address
-	- Request address
-	- Supports tera syntax, use {{ActionName}} to reference the output of the previous Action.
-- Headers
-	- Some URLs require sending specific headers with the request, usually to provide more metadata about the operation being performed.
-	- You can define what needs to be sent, or you can get the content output from the previous Action using `env.state.actionname`
+- 地址
+	- 请求地址
+	- 支持 tera 语法，使用 {{ActionName}} 来引用前一个动作的输出。
+- 头部
+	- 某些 URL 需要在请求中发送特定的头部，通常是为了提供有关正在执行的操作的更多元数据。
+	- 你可以定义需要发送的内容，或者使用 `env.state.actionname` 获取前一个动作的输出内容
 
 	```javascript
 	_fun = (env) => {
@@ -26,9 +25,9 @@ This module supports making requests to specific URLs and retrieving results.
 	    }
     }
 	```
-- Body
-	- Whenever you need to add or update structured data, you need to send body data with the request. For example, if you want to send a request to add a new customer to the database, you can include the details in the Body.
-	- You can define what needs to be sent here, or you can get the content output from the previous Action. 
+- 主体
+	- 当你需要添加或更新结构化数据时，你需要在请求中发送主体数据。例如，如果你想发送请求将新客户添加到数据库中，你可以在主体中包含详细信息。
+	- 你可以在这里定义需要发送的内容，或者你可以获取前一个动作的输出内容。
 
-### Output
-Depends on the specific request URL.
+### 输出
+取决于特定的请求 URL。

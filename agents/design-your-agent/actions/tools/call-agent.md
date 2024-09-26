@@ -1,37 +1,37 @@
-# Call agent
+# 调用代理
 
-We provide `Call Agent` action so that you can call other agents in your agent as an action.
+我们提供了`调用代理`动作，使你能够在你的代理中将其他代理作为一个动作来调用。
 
-## Usage
+## 使用方法
 
-* Add a `Call Agent` action to your agent. 
+* 在你的代理中添加一个`调用代理`动作。
 
 <figure><img src="../../../../images/call-agent-1.png"></figure>
 
-* Choose the agent you want to call(let's call it **"Agent B"**) and select the right version.
+* 选择你想要调用的代理（让我们称之为**"代理B"**）并选择正确的版本。
 
 <figure><img src="../../../../images/call-agent-2.png"></figure>
 
 <figure><img src="../../../../images/call-agent-3.png"></figure>
 
-* Fill in the "Input Args" of Agent B; And the output of Agent B is the output of this action.
+* 填写代理B的"输入参数"；代理B的输出就是这个动作的输出。
 
 <figure><img src="../../../../images/call-agent-4.png"></figure>
 
-* **NOTE**: Make sure you fully understand the input format of Agent B before filling in the "Input Args". Otherwise, the system will throw an error. 
+* **注意**：在填写"输入参数"之前，请确保你完全理解代理B的输入格式。否则，系统将抛出错误。
 
-* Use the "Block Configs" to configure Agent B's action.
+* 使用"块配置"来配置代理B的动作。
 
-## Output
+## 输出
 
-The output of this action is as follows:
+这个动作的输出如下：
 
 <figure><img src="../../../../images/call-agent-5.png"></figure>
 
 JSON
 
-| parameter  | type   | description                                |
-|------------|--------|--------------------------------------------|
-| status.run | object | the result of the calling(success or fail) |
-| results    | object | the response                               |
-| others     | object | the status of the agent being called       |
+| 参数        | 类型   | 描述                           |
+|-------------|--------|--------------------------------|
+| status.run  | 对象   | 调用的结果（成功或失败）       |
+| results     | 对象   | 响应                           |
+| others      | 对象   | 被调用代理的状态               |

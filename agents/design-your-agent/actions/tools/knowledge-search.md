@@ -1,30 +1,30 @@
-# Knowledge Search
+# 知识搜索
 
-Search action allow agents to make queries to specified knowledge base. This is useful for retrieving information from a knowledge base , later those retrieved information can be used as context for further generation. Retrieval Augmented Generation (RAG) agent is a good example of this use case.
+搜索动作允许代理对指定的知识库进行查询。这对于从知识库中检索信息非常有用，之后这些检索到的信息可以作为进一步生成的上下文。检索增强生成（RAG）代理是这种用例的一个很好的例子。
 
-Search Action consist of the following fields:
+搜索动作包含以下字段：
 
-* **Query:** Provide the desired prompt to look for inside your knowledges
-* **Knowledge:** Knowledge that you want to search in. You can select multiple knowledge bases. Technically, each knowledge in rebyte can be unique identifier by its knowledge name and project who owns it.
-* **Include Tags:** Add tags that you want to include in your search. Notes tags are exact match which means if you add "tag1" it will only include documents that have "tag1"
-* **Exclude Tags:** Add tags that you want to exclude in your search. Notes tags are exact match which means if you add "tag1" it will exclude all documents that have "tag1"
-* **Max Documents:** Maximum number of chunks to return. Chunk size is determined when knowledge is created.
+* **查询：** 提供想要在你的知识中查找的所需提示
+* **知识：** 你想要搜索的知识。你可以选择多个知识库。从技术上讲，rebyte 中的每个知识都可以通过其知识名称和拥有它的项目唯一标识。
+* **包含标签：** 添加你想在搜索中包含的标签。注意标签是精确匹配的，这意味着如果你添加了"tag1"，它只会包含具有"tag1"的文档
+* **排除标签：** 添加你想在搜索中排除的标签。注意标签是精确匹配的，这意味着如果你添加了"tag1"，它将排除所有具有"tag1"的文档
+* **最大文档数：** 返回的最大块数。块大小在创建知识时确定。
 
-<!-- ## Example
+<!-- ## 示例
 
-* [Knowledge Search](https://rebyte.ai/p/21b2295005587a5375d8/callable/7b4e664f3109d1aedbf1) -->
+* [知识搜索](https://rebyte.ai/p/21b2295005587a5375d8/callable/7b4e664f3109d1aedbf1) -->
 
-### Spec
+### 规格
 
-| Parameter | Description                       |
-| --------- | --------------------------------- |
-| query     | query for searching the knowledge |
+| 参数   | 描述                 |
+| ------ | -------------------- |
+| 查询   | 用于搜索知识的查询   |
 
-### Config
+### 配置
 
-| Parameter           | Description                           |
-| ------------------- | --------------------------------------|
-| knowledge to search | list of knowledge to search in        |
-| number\_of\_results | number of results you'd like to have  |
-| include tags        |                                       |
-| exclude tags        |                                       |
+| 参数             | 描述                           |
+| ---------------- | ------------------------------ |
+| 要搜索的知识     | 要搜索的知识列表               |
+| 结果数量         | 你想要的结果数量               |
+| 包含标签         |                                |
+| 排除标签         |                                |

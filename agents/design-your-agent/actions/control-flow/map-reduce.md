@@ -1,34 +1,34 @@
-# Map Reduce
+# 映射归约
 
-The `Map Reduce` action allows you to map over an array and executes a sequence of actions in parallel. 
+`映射归约`动作允许你对一个数组进行映射并并行执行一系列动作。
 
-This is useful for doing multiple actions in parallel, such as scraping multiple web pages.
+这对于并行执行多个动作很有用，比如抓取多个网页。
 
-## Usage
+## 使用方法
 
-* Add a `Map Reduce` action to your agent, and you will see two blocks with the same name ("MAP_REDUCE_1" for example) being added to the action.
+* 向你的代理添加一个`映射归约`动作，你会看到两个具有相同名称的块（例如"MAP_REDUCE_1"）被添加到动作中。
 
-* The action added between the two blocks will be executed in parallel for each element in the array.
+* 添加在两个块之间的动作将为数组中的每个元素并行执行。
 
 <figure><img src="../../../../images/map-2.png"></figure>
 
-* Set the following specifications for the `Map Reduce` action:
+* 为`映射归约`动作设置以下规格：
 
-### Specification
+### 规格
 
 <figure><img src="../../../../images/map.png"></figure>
 
-**MapOver**
+**映射对象**
 
-  * Choose a previous action and we will map over this action's output.
-  * The output of the previous action must be an array. Also make sure the array is not empty.
+  * 选择一个前序动作，我们将对这个动作的输出进行映射。
+  * 前序动作的输出必须是一个数组。同时确保数组不为空。
 
-**Repeat** 
+**重复次数**
 
-* The value will specify the maximum iteration count
-* If "repeat" value is not specified, then the iteration will stop when the array is exhausted. There is a hard limit of 64 iterations.
-* If "repeat" value is specified, then the iteration will stop when the array is exhausted or the iteration count reaches the repeat value, whichever comes first.
+* 该值将指定最大迭代次数
+* 如果未指定"重复"值，则当数组用尽时迭代将停止。有一个64次迭代的硬性限制。
+* 如果指定了"重复"值，则当数组用尽或迭代次数达到重复值时（以先到者为准），迭代将停止。
 
-### Output
+### 输出
 
-* Each action inside map-reduce action will output an array of values.
+* 映射归约动作内的每个动作将输出一个值数组。

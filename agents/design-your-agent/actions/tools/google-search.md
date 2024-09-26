@@ -1,16 +1,16 @@
-# Google Search
+# 谷歌搜索
 
-### Description
+### 描述
 
-Search the web using Google Search API
+使用谷歌搜索 API 搜索网页
 
-### spec
+### 规格
 
-| Parameter         | Description                                   |
-| ----------------- | --------------------------------------------- |
-| query             | query sent to Google                          |
-| number of results | number of search results returned from Google |
+| 参数         | 描述                           |
+| ------------ | ------------------------------ |
+| 查询         | 发送给谷歌的查询               |
+| 结果数量     | 从谷歌返回的搜索结果数量       |
 
-### config
+### 配置
 
-None
+无

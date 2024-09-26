@@ -1,31 +1,31 @@
-# Web Page Crawler
+# 网页爬虫
 
-This action helps you retrieves the HTML content from  a certain web page.
+这个动作帮助你从特定网页获取 HTML 内容。
 
-## Usage 
+## 使用方法
 
-* First, add a web crawl action to your agent using the **+** button in the agent editor.
+* 首先，使用代理编辑器中的 **+** 按钮向你的代理添加一个网页爬取动作。
 
 <figure><img src="../../../../images/web-1.png"></figure>
 
-* Specify the URL that you want to crawl and the CSS selector that you want to use to get the content from the page.
+* 指定你想要爬取的 URL 和你想用来从页面获取内容的 CSS 选择器。
 
-**Parameters:**
-* URL: The URL that you want to get data from
-* CSS selector: we will only get content using your specified CSS selector
+**参数：**
+* URL：你想要获取数据的 URL
+* CSS 选择器：我们将只获取使用你指定的 CSS 选择器的内容
 
 <figure><img src="../../../../images/web-2.png"></figure>
 
-* Run the agent and you will see the results in the action's output.
+* 运行代理，你将在动作的输出中看到结果。
 
-## Output
+## 输出
 
-* The output is a json object with the following fields:
-    * `data`: the content of the page
-    * `response`: the response object from the request
+* 输出是一个包含以下字段的 JSON 对象：
+    * `data`：页面的内容
+    * `response`：请求的响应对象
   
 <figure><img src="../../../../images/web-3.png"></figure>
 
-## Example Agent
+## 示例代理
 
-* [Web Page Crawler](https://rebyte.ai/p/21b2295005587a5375d8/callable/35358e328e30adf8a737/editor) 
+* [网页爬虫](https://rebyte.ai/p/21b2295005587a5375d8/callable/35358e328e30adf8a737/editor)

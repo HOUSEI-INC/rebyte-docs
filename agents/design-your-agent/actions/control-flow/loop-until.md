@@ -1,27 +1,25 @@
-# Loop
+# 循环
 
-This `Loop` action allows you to run actions repeatedly when the condition is true.
+这个`循环`动作允许你在条件为真时重复运行动作。
 
-## Usage
+## 使用方法
 
+* 首先，创建一个`循环直到`动作，你将看到两个"循环"块被创建。
 
-* First, cretae a `Loop Until` action and you will see two "Loop" blocks being created.
-
-<figure><img src="../../../../images/loop-2.png"></figure
+<figure><img src="../../../../images/loop-2.png"></figure>
   
-* Fill in the condition in Javascript format. This function should return a boolean value.
+* 以 Javascript 格式填写条件。这个函数应该返回一个布尔值。
   
-* You can also set the maximum iteration count. If the iteration count reaches the maximum iteration count, the loop will stop even if the condition is still true.
+* 你还可以设置最大迭代次数。如果迭代次数达到最大迭代次数，即使条件仍然为真，循环也会停止。
 
 <figure><img src="../../../../images/loop.png"></figure>
 
-* Then, add the actions you want to run inside the loop.
+* 然后，添加你想在循环内运行的动作。
 
-* During the execution, the system will judge if the condition is true. If so, the actions between the two loop blocks will be executed until the condition is no longer true. Otherwise, the execution will jump to after the second loop block.
+* 在执行过程中，系统将判断条件是否为真。如果是，两个循环块之间的动作将被执行，直到条件不再为真。否则，执行将跳到第二个循环块之后。
 
-* **NOTE**: The "Loop" action's results are arrays. Make sure to use formats like `env.state.LOOP_1[0]` or `{{LOOP_1[0]}}`.
+* **注意**："循环"动作的结果是数组。确保使用像 `env.state.LOOP_1[0]` 或 `{{LOOP_1[0]}}` 这样的格式。
 
+## 示例代理
 
-## Example Agent
-
-* [Loop Until](https://rebyte.ai/p/21b2295005587a5375d8/callable/0029ec181e52a9fc2bc3/editor)
+* [循环直到](https://rebyte.ai/p/21b2295005587a5375d8/callable/0029ec181e52a9fc2bc3/editor)

@@ -1,38 +1,38 @@
-# Overview of Testing
+# 测试概述
 
-Here, we will introduce some basic concepts and show you how to test your agent.
+在这里，我们将介绍一些基本概念，并向你展示如何测试你的代理。
 
-## Create Testing Dataset
+## 创建测试数据集
 
-* Datasets are used to test your agent. You can create a testing dataset by clicking the "Create Dataset" button in the dataset list page.
+* 数据集用于测试你的代理。你可以通过点击数据集列表页面中的"创建数据集"按钮来创建测试数据集。
 
-## Test and Debug
+## 测试和调试
 
-* Once you've created the testing dataset, you can go the the "design" page and choose the dataset.
+* 一旦你创建了测试数据集，你可以进入"设计"页面并选择该数据集。
 
-* click the "Run TestCases" button to run the agent with your selected dataset.
+* 点击"运行测试用例"按钮，使用你选择的数据集运行代理。
 
-* The running results will be shown under each action. 
+* 运行结果将显示在每个动作下方。
 
-* If there's no bug in the running process, you will see green check marks on the left side. 
+* 如果运行过程中没有错误，你将在左侧看到绿色的对勾标记。
 
 <figure><img src="../../images/no-bug.png" alt=""></figure>
 
-* Otherwise, you will see red cross marks on the action that went wrong.
+* 否则，你将在出错的动作上看到红色的叉号标记。
 
 <figure><img src="../../images/bug.png" alt=""></figure>
 
-* After every run, we record the running results in the "Runs" tab. We provide the RunID, the time of the run, the status of the run, and the agent used in the run.
+* 每次运行后，我们都会在"运行"标签中记录运行结果。我们提供运行ID、运行时间、运行状态以及运行中使用的代理。
 
-* Click on the "Run ID" of each run to see the details of the run.
+* 点击每次运行的"运行ID"可以查看运行的详细信息。
 
 <figure><img src="../../images/runs.png" alt=""></figure>
 
-## Playground
+## 游乐场
 
-* If you would like your testing to more flexible, you can use the playground to test your agent. 
+* 如果你希望测试更加灵活，可以使用游乐场来测试你的代理。
 
-* You should make extensive use of this capability to test your agent before publishing.
+* 在发布之前，你应该充分利用这个功能来测试你的代理。
 
 <figure><img src="../../images/playground.png" alt=""></figure>
 
