@@ -17,5 +17,4 @@ Everytime a new message is received by the agent, the "thread" will be updated w
 * The number of messages to be memorized by the "thread" can affect the performance of the large language model. 
   
 * The **more messages** to be memorized, the **more context** the large language model can get, but this will also increase the response time of the large language model.
-  
 

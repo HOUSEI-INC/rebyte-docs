@@ -1,32 +1,32 @@
-# Output
+# 输出
 
-* The `Output` action is used to send output information to the Agent.
+* `输出`操作用于向代理发送输出信息。
 
-* The last action in the Agent must be an `Output` action, you can not delete it or copy it.
+* 代理中的最后一个操作必须是`输出`操作，您不能删除或复制它。
 
-* The last action before the output action will give the output to the `Output` action. The `Output` action then give the output to agent's users or apps calling the agent.
+* 输出操作之前的最后一个操作将把输出给予`输出`操作。然后`输出`操作将输出给代理的用户或调用代理的应用程序。
 
-## Usage
+## 使用方法
 
-* You can insert a `Code` action before the `Output` action and specify the results you want to return to the user.
+* 您可以在`输出`操作之前插入一个`代码`操作，并指定您想要返回给用户的结果。
 
-* With no special settings, the `Output` action will return the last action's output to the user.
+* 如果没有特殊设置，`输出`操作将返回最后一个操作的输出给用户。
 
 <figure><img src="../../../images/output-1.png" alt=""></figure>
 
 <figure><img src="../../../images/output-2.png" alt=""></figure>
 
-## Data Format
+## 数据格式
 
-* When used in agent page, the output is shown under the `Output` action.
+* 在代理页面中使用时，输出显示在`输出`操作下方。
 
-* When connected to Apps, the output is sent to the App's user.
+* 当连接到应用程序时，输出被发送给应用程序的用户。
 
-* The output data format is as follows:
+* 输出数据格式如下：
     
     ```json
     {
         "role": "assistant",
-        "content": "The content."
+        "content": "内容。"
     }
     ```

@@ -1,80 +1,78 @@
-# Input
+# 输入
 
-* The `Input Action` is used to send input information to the Agent. Other actions are based on the input information to perform the right operation.
+* `输入操作`用于向代理发送输入信息。其他操作基于这些输入信息执行正确的操作。
 
-* The first action in the Agent must be an `Input Action`, you can not delete it or copy it.
+* 代理中的第一个操作必须是`输入操作`，您不能删除或复制它。
 
-* In Design mode, you can specify a dataset as INPUT, each data in this dataset(each row) will be considered as a separate input to agent, and all inputs will be run in parallel. Each data row will receive a separate thread id.
+* 在设计模式下，您可以指定一个数据集作为输入，这个数据集中的每条数据（每一行）将被视为代理的单独输入，所有输入将并行运行。每条数据行将收到一个单独的线程ID。
 
-* In production mode, input are passed via agent API.
+* 在生产模式下，输入通过代理API传递。
 
-* Rebyte defines a common data structure to handle messages passed into agent, it's strong recommended to use this format in order to make your agent work with assistant/thread API seamlessly.
+* Rebyte定义了一个通用数据结构来处理传入代理的消息，强烈建议使用这种格式，以使您的代理能够与助手/线程API无缝工作。
 
-## Common Message Format
+## 通用消息格式
 
-Different LLM has different message format, but Rebyte defines a common message format to handle messages passed into agent, internally we will handle all compatibility issues.
+不同的LLM有不同的消息格式，但Rebyte定义了一个通用消息格式来处理传入代理的消息，内部我们将处理所有兼容性问题。
 
-**Text Message**
+**文本消息**
 ```json
 {
-  "role": "role of this message, for example user, assistant",
-  "content": "content string of this messages"
+  "role": "此消息的角色，例如用户、助手",
+  "content": "此消息的内容字符串"
 }
 ```
 
-**Message with Image URL**
+**带图片URL的消息**
 ```json
 {
   "role": "user",
-  "content": "content string of this messages",
+  "content": "此消息的内容字符串",
   "parts": [
     {
       "type": "image_url",
       "image_url": {
-        "url": "url of this image"
+        "url": "此图片的url"
       }
     }
   ]
 }
 ```
 
-**Message with Image Data**
+**带图片数据的消息**
 ```json
 {
   "role": "user",
-  "content": "content string of this messages",
+  "content": "此消息的内容字符串",
   "parts": [
     {
       "type": "blob",
       "blob": {
         "mime_type": "image/png",
-        "url": "base64 encoded image data"
+        "url": "base64编码的图片数据"
       }
     }
   ]
 }
 ```
 
-
-
-**Message with file**
+**带文件的消息**
 ```json
 {
-  "role": "role of this message, for example user, assistant",
-  "content": "content string of this messages",
+  "role": "此消息的角色，例如用户、助手",
+  "content": "此消息的内容字符串",
   "parts": [
     {
       "type": "file",
       "file": {
-        "id": "uuid of this file",
-        "name": "name of this file, with extension"
+        "id": "此文件的uuid",
+        "name": "此文件的名称，带扩展名"
       }
     }
   ]
 }
 ```
 
-**Multiple Messages**
+**多条消息**
 
 ```json
 {
@@ -95,55 +93,55 @@ Different LLM has different message format, but Rebyte defines a common message 
 }
 ```
 
-**IMPORTANT**
-Only messages conform to this format will be saved to thread automatically, other messages will be ignored
+**重要**
+只有符合此格式的消息才会自动保存到线程中，其他消息将被忽略
 
-## Usage
+## 使用方法
 
-You can use the input by using the `{{INPUT.message}}` variable in the instructions or `env.state.INPUT.messages` in the code editor.
+您可以在指令中使用`{{INPUT.message}}`变量或在代码编辑器中使用`env.state.INPUT.messages`来使用输入。
 
 <figure><img src="../../../images/input-action.png"></figure>
 
-## Data Format
+## 数据格式
 
-* When used in agent page, the input is extracted from the predefined datasets.
+* 在代理页面中使用时，输入从预定义的数据集中提取。
 
-* When connected to Apps, the input is from the app user's input and conversation history. By default, We will put the last 10 messages to the agent.
+* 当连接到应用程序时，输入来自应用程序用户的输入和对话历史。默认情况下，我们会将最后10条消息发送给代理。
 
-* The input data format is as follows:
+* 输入数据格式如下：
 
     ```json
     {
     "messages":[{
             "role": "user",
-            "content": "The content."
+            "content": "内容。"
         },
         {
             "role": "assistant",
-            "content": "The content."
+            "content": "内容。"
         }]
     }
     ```
 
-<!-- ### Parameters
+<!-- ### 参数
 
-- Input type
-    - Select from predefined Datasets
-    - When connecting to Chat, the latest 10 history dialogues will be sent to the Agent as input information by default, formatted as follows
+- 输入类型
+    - 从预定义的数据集中选择
+    - 当连接到聊天时，默认情况下最新的10条历史对话将作为输入信息发送给代理，格式如下
     
     ```json
     {
     "Messages":[
     {
         "role": "user",
-        "content": "The content."
+        "content": "内容。"
     },
     {
         "role": "assistant",
-        "content": "The content."
+        "content": "内容。"
     }
     ]
     }
     ```
-    - output
-        - Output the correct data -->
+    - 输出
+        - 输出正确的数据 -->

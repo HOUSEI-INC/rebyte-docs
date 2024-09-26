@@ -1,19 +1,17 @@
-# Dataset Loader
+# 数据集加载器
 
-The `Dataset Loader` action allows you to load data from the agent's datasets. The data can be used in subsequent actions.
+`数据集加载器`操作允许您从代理的数据集中加载数据。这些数据可以在后续操作中使用。
 
-## Usage
+## 使用方法
 
-* Add a `Dataset Loader` action to your agent and select the dataset you want to load from.
+* 向您的代理添加一个`数据集加载器`操作，并选择您想要加载的数据集。
 
-
-* Refer to this data by using the dataset's name, like: `{{DATA_2}}` in downstream actions.
-
+* 在下游操作中使用数据集的名称来引用这些数据，例如：`{{DATA_2}}`。
 
 <figure><img src="../../../../images/dataset-loader.png"></figure>
 
-## Example Agent
+## 示例代理
 
-<!-- We provide example agents to help you understand the usage of actions. -->
+<!-- 我们提供示例代理来帮助您理解操作的使用方法。 -->
 
-* [Dataset Loader](https://rebyte.ai/p/21b2295005587a5375d8/callable/fa56c8cf3f2080ef08d4/editor)
+* [数据集加载器](https://rebyte.ai/p/21b2295005587a5375d8/callable/fa56c8cf3f2080ef08d4/editor)
