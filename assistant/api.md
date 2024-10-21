@@ -39,19 +39,19 @@ curl 'https://rebyte.ai/api/sdk/threads' \
     "messages":[
         {
             "role":"user",
-            "content":"Hi, how are you?"
+            "content":"你好,你怎么样?"
         },
         {
-            "role":"asistant",
-            "content":"Hi, I am good. What about you? Is there anything I can help?"
+            "role":"assistant",
+            "content":"你好,我很好。你呢?有什么我可以帮助你的吗?"
         }
     ]
 }'
 ```
 
-In the response, you will find the thread id. You can use this thread id to add messages to the thread and run the agent on the thread.
+在响应中,您将找到线程id。您可以使用这个线程id向线程添加消息并在线程上运行代理。
 
-* Example Response 
+* 示例响应
   
 ```shell
 {
@@ -60,7 +60,7 @@ In the response, you will find the thread id. You can use this thread id to add 
 }
 ```
 
-3. Add messages to the thread
+3. 向线程添加消息
 
 ```shell
 curl 'https://rebyte.ai/api/sdk/threads/{thread_id}/messages' \
@@ -68,13 +68,13 @@ curl 'https://rebyte.ai/api/sdk/threads/{thread_id}/messages' \
   -H "Authorization: Bearer $REBYTE_KEY" \
   -d '{
       "role": "user",
-      "content": "How does AI work? Explain it in simple terms."
+      "content": "AI是如何工作的?用简单的术语解释一下。"
     }'
 ```
 
-In the response, you can see the message information.
+在响应中,您可以看到消息信息。
 
-* Example Response
+* 示例响应
 
 ```shell
 {
@@ -82,13 +82,13 @@ In the response, you can see the message information.
     "created_at": 1714051597,
     "thread_id": "UHSHhnkWGElWShQS5ZtOa",
     "role": "user",
-    "content": "Teach me how to make pancake."
+    "content": "教我如何做煎饼。"
 }
 ```
 
-4. Run the agent on the thread
+4. 在线程上运行代理
 
-In order to run the agent on the thread, you should get the url from deploying your agent and make a request to this url.
+为了在线程上运行代理,您应该从部署的代理获取url并向这个url发出请求。
 
 ```shell
 curl -L https://rebyte.ai/api/sdk/p/21b2295005587a5375d8/a/f4222f209267e5b24cda/r \
@@ -112,12 +112,11 @@ curl -L https://rebyte.ai/api/sdk/p/21b2295005587a5375d8/a/f4222f209267e5b24cda/
     }'
 ```
 
-* When calling the agent, you should specify the thread id, and you will be able to get all the messages and metadata from the thread.
+* 调用代理时,您应该指定线程id,您将能够从线程获取所有消息和元数据。
 
-* You can also use "contentOnly:true" to get only the content of the messages.
+* 您还可以使用"contentOnly:true"来仅获取消息的内容。
 
-
-5. Get the messages from the thread
+5. 从线程获取消息
 
 ```shell
 curl 'https://rebyte.ai/api/sdk/threads/{thread_id}/messages'     \
@@ -125,9 +124,9 @@ curl 'https://rebyte.ai/api/sdk/threads/{thread_id}/messages'     \
   -H "Authorization: Bearer $REBYTE_KEY" \
 ```
 
-In the response, you will get the list of all messages on the thread.
+在响应中,您将获得线程上所有消息的列表。
 
-* Example Response
+* 示例响应
 
 ```shell
 {
@@ -137,14 +136,14 @@ In the response, you will get the list of all messages on the thread.
             "created_at": 1714051597,
             "thread_id": "UHSHhnkWGElWShQS5ZtOa",
             "role": "user",
-            "content": "Teach me how to make pancake."
+            "content": "教我如何做煎饼。"
         },
         {
             "id": "pJWH0zkmgnQONAHr6bnA4",
             "created_at": 1714050770,
             "thread_id": "UHSHhnkWGElWShQS5ZtOa",
             "role": "assistant",
-            "content": "Bitcoin is a decentralized digital currency, often referred to as a cryptocurrency. It was created in 2009 by an unknown person using the pseudonym Satoshi Nakamoto. Bitcoin transactions are recorded on a public ledger called a blockchain, and it operates without the need for a central authority or government. Bitcoin can be used for online transactions, as an investment, or as a store of value. It is also known for its potential to provide financial privacy and security.",
+            "content": "比特币是一种去中心化的数字货币,通常被称为加密货币。它于2009年由一个使用化名Satoshi Nakamoto的未知人士创建。比特币交易记录在一个称为区块链的公共账本上,它无需中央权威机构或政府就能运作。比特币可用于在线交易、投资或作为价值储存。它还以提供财务隐私和安全的潜力而闻名。",
             "agent_id": "297c5b234e770dd73713",
             "name": "chat_with_gpt3_5",
             "run_id": "4ed010c66458a2ac738932d950830218a2224e7ba22e12718ad66872be6832e7"
@@ -154,21 +153,21 @@ In the response, you will get the list of all messages on the thread.
             "created_at": 1714050764,
             "thread_id": "UHSHhnkWGElWShQS5ZtOa",
             "role": "user",
-            "content": "What is bitcoin?"
+            "content": "什么是比特币?"
         },
         {
             "id": "xNQZdrCSJkYhM13b25Mhp",
             "created_at": 1714050764,
             "thread_id": "UHSHhnkWGElWShQS5ZtOa",
             "role": "assistant",
-            "content": "Hi, how are you?"
+            "content": "你好,你怎么样?"
         },
         {
             "id": "tfSLCfLflDquhQ7680j8z",
             "created_at": 1714050764,
             "thread_id": "UHSHhnkWGElWShQS5ZtOa",
             "role": "user",
-            "content": "Hello!"
+            "content": "你好!"
         }
     ]
 }
