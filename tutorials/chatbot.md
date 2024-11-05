@@ -1,10 +1,14 @@
-# 搜索引擎代理
+# 为你的公司主页构建一个AI智能客服助手
 
-为您总结网页内容。
+## 1. 设置数据集
 
-### 在`数据集`中设置测试数据
 
-```json
+### 在`数据集`中设置测试数据,创建数据集chatbot_dataset
+
+<figure><img src="../tutorials/screenshots/create_dataset.png" alt=""></figure>
+<figure><img src="../tutorials/screenshots/dataset.png" alt=""></figure>
+
+<!-- ```json
 [
   {
     "role": "user",
@@ -19,9 +23,21 @@
     "content": "谁打进了制胜球？"
   }
 ]
+``` -->
+```json
+[
+  {
+    "role": "user",
+    "content": "璞华科技是一家什么样的公司？"
+  }
+]
 ```
 
-### 使用`代码动作`获取最后一条消息
+### 使用`代码动作`获取输入信息，数据集选择刚刚创建的chatbot_dataset
+
+<figure><img src="../tutorials/screenshots/input.png" alt=""></figure>
+
+### 新建`代码动作`模块EXTRACT_QUESTION获取问题信息
 
 ```javascript
 _fun = (env) => {
@@ -30,13 +46,18 @@ _fun = (env) => {
 }
 ```
 
-### 使用`代码动作`获取聊天历史
+### 新建`代码动作`MESSAGES将问题打包为标准代码格式
 
 ```javascript
-_fun = (env) => {
-  // 使用 `env.state.Action_NAME` 来引用之前动作的输出
-  return env.state.INPUT.messages.slice(0, env.state.INPUT.messages.length - 1).map((m) => m.content).join("\n")
+const _fun = (env) => {
+    return env.state.INPUT.messages.map((msg) => {
+    return {
+      role: msg.role,
+      content: msg.content || "",
+    }
+  })
 }
+
 ```
 
 ### 使用`代码动作`提取内容
