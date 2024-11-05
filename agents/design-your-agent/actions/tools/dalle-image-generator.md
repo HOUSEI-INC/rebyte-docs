@@ -1,30 +1,30 @@
-# Dalle Image Generator
+# DALL-E图像生成器
 
-This action allows you to input text prompts and generate images using the [DALL-E](https://openai.com/blog/dall-e/) model.
+此动作允许您输入文本提示并使用[DALL-E](https://openai.com/blog/dall-e/)模型生成图像。
 
-## Usage
+## 使用方法
 
-* First, add a "Dalle Image Generator" action to your agent.
+* 首先，在您的代理中添加一个"DALL-E图像生成器"动作。
 
 <figure><img src="../../../../images/dalle-1.png"></figure>
 
-* Fill in the prompt, image size and the response_format.
-  * prompt: detailed description of the image you want to generate.
-  * image size: the size of the image you want to generate. Should be one of the following: "1024x1024", "1792x1024", "1024x1792".
-  * response_format: the format of the response. Should be one of the following: "url", "base64".
+* 填写提示、图像尺寸和响应格式。
+  * 提示：您想要生成的图像的详细描述。
+  * 图像尺寸：您想要生成的图像的尺寸。应该是以下之一："1024x1024"、"1792x1024"、"1024x1792"。
+  * 响应格式：响应的格式。应该是以下之一："url"、"base64"。
   
 <figure><img src="../../../../images/dalle-2.png"></figure>
   
-## Output 
+## 输出
 
-* The output of this action is a URL or a base64 encoded image.
+* 此动作的输出是一个URL或base64编码的图像。
 
 <figure><img src="../../../../images/dalle-3.png"></figure>
 
-* Click the link and you will see the generated image!
+* 点击链接，您就能看到生成的图像！
 
 <figure><img src="../../../../images/dalle-4.png"></figure>
 
-* You can use `env.state.REBYTE_OPENAI_IMAGE_GEN_1.images[0].url` or `{{REBYTE_OPENAI_IMAGE_GEN_1.images[0].url}}` to reference the URL in the next action. 
+* 您可以使用`env.state.REBYTE_OPENAI_IMAGE_GEN_1.images[0].url`或`{{REBYTE_OPENAI_IMAGE_GEN_1.images[0].url}}`在下一个动作中引用URL。
   
-* The base64 encoded image can be referenced using `env.state.REBYTE_OPENAI_IMAGE_GEN_1.images[0].base64` or `{{REBYTE_OPENAI_IMAGE_GEN_1.images[0].base64}}`.
+* base64编码的图像可以使用`env.state.REBYTE_OPENAI_IMAGE_GEN_1.images[0].base64`或`{{REBYTE_OPENAI_IMAGE_GEN_1.images[0].base64}}`来引用。

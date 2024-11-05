@@ -1,10 +1,10 @@
-# Overview
+# 概述
 
-Group agent allows you to combine the abilities of multiple agents into one agent. 
+群组代理允许您将多个代理的能力组合成一个代理。
 
-## Usage 
-You can specify the agents you want to use in the group agent.
+## 使用方法
+您可以指定要在群组代理中使用的代理。
 
-You can also set the maximum number of previous runs(history messages) on thread and maximum rounds of conversation between agents.
+您还可以设置线程上的最大历史运行次数（历史消息）和代理之间的最大对话轮数。
 
-It is useful when you want to combine multiple agents to solve a complex problem.
+当您想要组合多个代理来解决复杂问题时，这很有用。

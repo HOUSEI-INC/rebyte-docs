@@ -1,29 +1,29 @@
-# Thread Message Loader
+# 线程消息加载器
 
-This action allows you to load history messages from a thread in your agent.
+此动作允许您在代理中加载线程的历史消息。
 
-## Usage
+## 使用方法
 
-* First add a `thread-message-loader` action to your agent.
+* 首先在您的代理中添加一个`线程消息加载器`动作。
 
 <figure>
   <img src="../../../../images/thread-1.png" />
 </figure>
 
-* Set the "recent messages on the thread" to specify the number of recent messages you want to load.
+* 设置"线程上的最近消息"来指定您想要加载的最近消息数量。
 
 <figure>
   <img src="../../../../images/thread-2.png" />
 </figure>
 
-* Use the loaded messages in the following actions to add context to the conversation.
+* 在后续动作中使用加载的消息来为对话添加上下文。
 
-* Run the agent and see the messages loaded from the thread.
+* 运行代理并查看从线程加载的消息。
 
 <figure>
   <img src="../../../../images/thread-3.png" />
 </figure>
 
-## Example Agent
+## 示例代理
 
-[Here](https://rebyte.ai/p/21b2295005587a5375d8/callable/c6b378f9c462ebbe60a8/editor) is an example agent to show you how to use the `thread-message-loader` action.
+[这里](https://rebyte.ai/p/21b2295005587a5375d8/callable/c6b378f9c462ebbe60a8/editor)是一个示例代理，向您展示如何使用`线程消息加载器`动作。

@@ -1,35 +1,35 @@
-# Visualize Everything
+# 可视化一切
 
-This action allows you to write vega-lite code to visualize your data. You can use this action to create a variety of visualizations, including bar charts, line charts, scatter plots, and more.
+此动作允许您编写vega-lite代码来可视化您的数据。您可以使用此动作创建各种可视化，包括条形图、折线图、散点图等。
 
-## Usage
+## 使用方法
 
-* First, add a `visualize-everything` action to your agent.
+* 首先，在您的代理中添加一个`可视化一切`动作。
 
 <figure>
   <img src="../../../../images/visual-1-1.png"> 
 </figure>
 
-* Write your vega-lite code in the `spec` field. 
+* 在`spec`字段中编写您的vega-lite代码。
 
 <figure>
   <img src="../../../../images/visual-1-2.png"> 
 </figure>
 
-* Run the agent and we will provide you with a link to download your visualization.
+* 运行代理，我们将为您提供一个下载可视化的链接。
 
 <figure>
   <img src="../../../../images/visual-1-3.png"> 
 </figure>
 
-* Here's an example of the code and the svg file.
+* 这是代码和svg文件的示例。
 
 ```
-{# Write any code in vega-lite schema and we will give you a link to download the graph #}
+{# 用vega-lite模式编写何代码，我们将给您一个下载图表的链接 #}
 
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "description": "A simple bar chart with embedded data.",
+  "description": "一个带有嵌入数据的简单条形图。",
   "data": {
     "values": [
       {"category": "A", "count": 28},
@@ -54,6 +54,6 @@ This action allows you to write vega-lite code to visualize your data. You can u
   <img src="../../../../images/visual-1-4.png" width="80%"/> 
 </figure>
 
-## Example Agent
+## 示例代理
 
-[Here](https://rebyte.ai/p/21b2295005587a5375d8/callable/2852459e7cc4370f1b50/editor) is a demo agent to show you how to uses the `visualize-everything` action.
+[这里](https://rebyte.ai/p/21b2295005587a5375d8/callable/2852459e7cc4370f1b50/editor)是一个演示代理，向您展示如何使用`可视化一切`动作。

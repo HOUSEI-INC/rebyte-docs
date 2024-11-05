@@ -1,20 +1,20 @@
-# Http Request Maker
+# HTTP请求制作器
 
-"Http Request Maker" is a tool action, which is used to curl http/https requests.
+"HTTP请求制作器"是一个工具动作，用于执行http/https请求。
 
-## Usage
+## 使用方法
 
-* Add a "Http Request" action to your agent.
+* 在您的代理中添加一个"HTTP请求"动作。
 
-* Fill in the "Host" with the host of the URL. It can be a domain name or an IP address.
+* 在"主机"中填入URL的主机地址。可以是域名或IP地址。
 
-* Fill in the "Headers", this is the header of the HTTP request.
+* 填写"请求头"，这是HTTP请求的头部信息。
 
-* Fill in the "Body" if you want to send a POST request.(Only available in POST request)
+* 如果您想发送POST请求，请填写"请求体"。（仅在POST请求中可用）
 
-## Specification
+## 规范
 
-* Scheme: HTTP or HTTPS
+* 协议：HTTP或HTTPS
 
-* Method: GET or POST
+* 方法：GET或POST
 

@@ -1,53 +1,53 @@
-# Quick Start
+# 快速入门
 
-In this tutorial, we will show you how to create a group agent that will discuss a topic between two agent.
+在本教程中，我们将向您展示如何创建一个群组代理，让两个代理之间讨论一个话题。
 
-## Step 1: Create A Group Agent
+## 步骤1：创建群组代理
 
-* Navigate to the "Agents" tab in the sidebar and then click on "Create Agent" on the top right.
+* 在侧边栏导航到"代理"标签，然后点击右上角的"创建代理"。
 
-* Choose the "Group Agent" option.
+* 选择"群组代理"选项。
 
-* Fill in the name,description, and set the visibility of your group agent.
+* 填写您的群组代理的名称、描述和可见性设置。
 
 <figure><img src="../../../images/group-1.png"></figure>
 
 
-## Step 2: Design Your Group Agent
+## 步骤2：设计您的群组代理
 
-* This agent only has four actions:`Input`, `Thread`, `Agent Group` and `Output`, and you can't add or delete any action.
+* 这个代理只有四个动作：`输入`、`线程`、`代理组`和`输出`，您不能添加或删除任何动作。
 
-* The `Input` and `Output` actions are the same as a stack agent.You can create your own datasets to test your agent.
+* `输入`和`输出`动作与堆栈代理相同。您可以创建自己的数据集来测试您的代理。
 
-**Thread**
+**线程**
 
 <figure><img src="../../../images/group-2.png"></figure>
 
-* Configure the "Max Number of Previous Runs on Thread" in the `Thread` action using the toggle button. This is the maximum number of history messages that the agent will record and send to the model everytime it runs.
+* 使用切换按钮在`线程`动作中配置"线程上的最大历史运行次数"。这是代理每次运行时将记录并发送给模型的最大历史消息数。
 
-* The longer the history, the more context the model will have to work with. However, the longer the history, the slower the agent will run. 
+* 历史越长，模型可以使用的上下文就越多。但是，历史越长，代理运行的速度就越慢。
   
-**Agent Group**
+**代理组**
 
 <figure><img src="../../../images/group-3.png"></figure>
 
-* Choose the agents you want to use in the `Agent Group` action. Here we choose the two student chatbot agents we created.
+* 在`代理组`动作中选择您想要使用的代理。这里我们选择了我们创建的两个学生聊天机器人代理。
 
-* NOTE: You must be familiar with the agent's function and the agent's input and output format. Also make sure the agent's output format is compatible with the next agent's input format.
+* 注意：您必须熟悉代理的功能以及代理的输入和输出格式。同时确保代理的输出格式与下一个代理的输入格式兼容。
   
-* Specify the execution order of the agents in the group agent. The agent will run the agents in the order you specified. For example, here we put "round robin" in Agent Selector Instruction, so the agent will run the agents one by one in a loop.
+* 指定群组代理中代理的执行顺序。代理将按照您指定的顺序运行代理。例如，这里我们在代理选择器指令中放入"轮流"，所以代理将在循环中一个接一个地运行代理。
   
-* Following the given order, the system will run the agents one by one. The first agent's output will be the input of the second agent, and so on.
+* 按照给定的顺序，系统将一个接一个地运行代理。第一个代理的输出将是第二个代理的输入，依此类推。
   
-* You can also set the maximum rounds of conversation between agents. If the conversation between agents exceeds the maximum rounds, the agent will stop running.
+* 您还可以设置代理之间对话的最大轮数。如果代理之间的对话超过最大轮数，代理将停止运行。
 
-And that's it!
+就是这样！
 
-## Step 3: Test Your Group Agent
+## 步骤3：测试您的群组代理
 
-* This is basically the same a [testing a stack agent](../../test-your-agent/overview.md). 
+* 这基本上与[测试堆栈代理](../../test-your-agent/overview.md)相同。
   
-* The only difference is that rather than focusing on the output of only one agent, you should take a good look at the output of all the agents in the group agent and try to find out if their behavior is what you want.
+* 唯一的区别是，您不应该只关注一个代理的输出，而应该仔细查看群组代理中所有代理的输出，并尝试找出它们的行为是否符合您的预期。
 
 
 

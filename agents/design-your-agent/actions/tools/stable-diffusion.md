@@ -1,38 +1,38 @@
 # Stable Diffusion
 
-This action allows you to input text prompts and generate images using the Stable Diffusion model.
+此动作允许您输入文本提示并使用Stable Diffusion模型生成图像。
 
 <figure><img src="../../../../images/sd-1.png"></figure>
 
-## Usage
+## 使用方法
 
-* First, add a "Stable Diffusion" action to your agent.
+* 首先，在您的代理中添加一个"Stable Diffusion"动作。
 
 <figure><img src="../../../../images/sd-2.png"></figure>
 
-* Fill in the prompt, image size and the response_format.
-  * prompt: detailed description of the image you want to generate.
-  * image size: the size of the image you want to generate. Should be one of the following: "1024x1024", "1792x1024", "1024x1792".
-  * response_format: the format of the response. Should be one of the following: "url", "b64_json".
+* 填写提示、图像尺寸和响应格式。
+  * 提示：您想要生成的图像的详细描述。
+  * 图像尺寸：您想要生成的图像的尺寸。应该是以下之一："1024x1024"、"1792x1024"、"1024x1792"。
+  * 响应格式：响应的格式。应该是以下之一："url"、"b64_json"。
   
 <figure><img src="../../../../images/sd-3.png"></figure>
   
-## Output 
+## 输出
 
-* The output of this action is a URL or a base64 encoded image.
+* 此动作的输出是一个URL或base64编码的图像。
 
 <figure><img src="../../../../images/sd-4.png"></figure>
 
-* Click the link and you will see the generated image!
+* 点击链接，您就能看到生成的图像！
 
 <figure><img src="../../../../images/sd-5.png"></figure>
 
-* You can use `env.state.REBYTE_OPENAI_IMAGE_GEN_1.images[0].url` or `{{REBYTE_OPENAI_IMAGE_GEN_1.images[0].url}}` to reference the URL in the next action. 
+* 您可以使用`env.state.REBYTE_OPENAI_IMAGE_GEN_1.images[0].url`或`{{REBYTE_OPENAI_IMAGE_GEN_1.images[0].url}}`在下一个动作中引用URL。
   
-* The base64 encoded image can be referenced using `env.state.REBYTE_OPENAI_IMAGE_GEN_1.images[0].base64` or `{{REBYTE_OPENAI_IMAGE_GEN_1.images[0].base64}}`.
+* base64编码的图像可以使用`env.state.REBYTE_OPENAI_IMAGE_GEN_1.images[0].base64`或`{{REBYTE_OPENAI_IMAGE_GEN_1.images[0].base64}}`来引用。
 
-## Example Agent
+## 示例代理
 
-* [This](https://rebyte.ai/p/21b2295005587a5375d8/callable/3396e0e83a81396c1ba7/editor) is the "HowToUse" agent for stable diffusion action.
+* [这里](https://rebyte.ai/p/21b2295005587a5375d8/callable/3396e0e83a81396c1ba7/editor)是Stable Diffusion动作的"使用方法"代理。
 
-* [This](https://rebyte.ai/copilot/c359f8a71fa2e7c6264a/session/d67c8195be) is the app for stable diffusion.
+* [这里](https://rebyte.ai/copilot/c359f8a71fa2e7c6264a/session/d67c8195be)是Stable Diffusion的应用程序。

@@ -1,40 +1,39 @@
-# You.com search
+# You.com搜索
 
-With this "You.com" search action, you can go and search anything and you will get your results in seconds!
+通过这个"You.com"搜索动作，您可以搜索任何内容，并在几秒钟内获得结果！
 
 <figure><img src="../../../../images/you-1.png" /></figure>
 
-## Usage
+## 使用方法
 
-
-* First add a "You.com" search action with the plus signs.
+* 首先通过加号添加一个"You.com"搜索动作。
 
 <figure><img src="../../../../images/you-2.1.png" /></figure>
 
-* Choose the "You.com search" action.
+* 选择"You.com搜索"动作。
 
 <figure><img src="../../../../images/you-2.2.png" /></figure>
 
-* There are some parameters you can set.
-  * query: the search query.
-  * num_web_results: the number of web results you want to get.
-  * offset: the offset of the search results. If the offset is 0, the first result will be the first result of the search results. If the offset is 10, the first result will be the 11th result of the search results.
-  * country: the country code. For example, "US" for United States.
-    * country list include:'AR', 'AU', 'AT', 'BE', 'BR', 'CA', 'CL', 'DK', 'FI', 'FR', 'DE', 'HK', 'IN', 'ID', 'IT', 'JP', 'KR', 'MY', 'MX', 'NL', 'NZ', 'NO', 'CN', 'PL', 'PT', 'PH', 'RU', 'SA', 'ZA', 'ES', 'SE', 'CH', 'TW', 'TR', 'GB', 'US'.
-  * safesearch: the safe search mode, it can be "strict", "moderate" or "off".
+* 您可以设置一些参数。
+  * query：搜索查询。
+  * num_web_results：您想要获取的网页结果数量。
+  * offset：搜索结果的偏移量。如果偏移量为0，第一个结果将是搜索结果的第一个结果。如果偏移量为10，第一个结果将是搜索结果的第11个结果。
+  * country：国家代码。例如，"US"代表美国。
+    * 国家列表包括：'AR'、'AU'、'AT'、'BE'、'BR'、'CA'、'CL'、'DK'、'FI'、'FR'、'DE'、'HK'、'IN'、'ID'、'IT'、'JP'、'KR'、'MY'、'MX'、'NL'、'NZ'、'NO'、'CN'、'PL'、'PT'、'PH'、'RU'、'SA'、'ZA'、'ES'、'SE'、'CH'、'TW'、'TR'、'GB'、'US'。
+  * safesearch：安全搜索模式，可以是"strict"（严格）、"moderate"（适中）或"off"（关闭）。
 
 <figure><img src="../../../../images/you-3.png" /></figure>
 
-* Run the agent and see the search results.
+* 运行代理并查看搜索结果。
 
-### Output
+### 输出
 
 <figure><img src="../../../../images/you-4.png" /></figure>
 
-* The output is a bit complex, it's a JSON object with two fields:"hits" and "latency". 
+* 输出比较复杂，它是一个包含两个字段的JSON对象："hits"和"latency"。
 
-* The search results are in the "hits" field, it's an array with 10 most related search results.
+* 搜索结果在"hits"字段中，它是一个包含10个最相关搜索结果的数组。
 
-## Example Agent
+## 示例代理
 
-* To see and use this action, please check the example agent:[You.com Search](https://rebyte.ai/p/21b2295005587a5375d8/callable/b6e67fc59579d6304fef/editor).
+* 要查看和使用此动作，请查看示例代理：[You.com搜索](https://rebyte.ai/p/21b2295005587a5375d8/callable/b6e67fc59579d6304fef/editor)。
