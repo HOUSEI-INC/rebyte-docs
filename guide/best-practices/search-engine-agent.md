@@ -1,66 +1,66 @@
-# Search engine agent
+# 搜索引擎代理
 
-Summarize web page contents for you.
+为您总结网页内容。
 
-### Setup the testing data in `Datasets`
+### 在`数据集`中设置测试数据
 
 ```json
 [
   {
     "role": "user",
-    "content": "Who won the last UEFA Champions League?"
+    "content": "谁赢得了上一届欧冠联赛？"
   },
   {
     "role": "assitant",
-    "content": "The last winner of the UEFA Champions League was Manchester City in the 2022-23 season. This was their first title in the competition. Real Madrid holds the record for the most victories in the Champions League, having won it 14 times [0][1]."
+    "content": "2022-23赛季的欧冠冠军是曼城。这是他们在该项赛事中的首个冠军。皇家马德里保持着欧冠最多冠军的记录，已经14次夺冠[0][1]。"
   },
   {
     "role": "user",
-    "content": "Who scored the winning goal?"
+    "content": "谁打进了制胜球？"
   }
 ]
 ```
 
 
-### Use `Code Action` to get the last message
+### 使用`代码动作`获取最后一条消息
 
 ```javascript
 _fun = (env) => {
-  // use `env.state.Action_NAME` to refer output from previous Actions.
+  // 使用 `env.state.Action_NAME` 来引用前面动作的输出。
   return env.state.INPUT.messages.slice(-1)[0].content
 }
 ```
 
-### Use `Code Action` to get the chat history
+### 使用`代码动作`获取聊天历史
 
 ```javascript
 _fun = (env) => {
-  // use `env.state.Action_NAME` to refer output from previous Actions.
+  // 使用 `env.state.Action_NAME` 来引用前面动作的输出。
  return env.state.INPUT.messages.slice(0, env.state.INPUT.messages.length - 1).map((m) => m.content).join("\n")
 }
 ```
 
-### Use `Code Action` to extract content
+### 使用`代码动作`提取内容
 
 ```txt
-{# Your prompt here, for example: 'Answer those question based on the following content.' #}
-{# Begin your prompt below: #}
-This is the question: {{EXTRACT_QUESTION}}
-This is the conversation history: {{HISTORY}}
+{# 在这里写入您的提示，例如：'根据以下内容回答这些问题。' #}
+{# 在下面开始您的提示： #}
+这是问题：{{EXTRACT_QUESTION}}
+这是对话历史：{{HISTORY}}
 
-Add necessary contexts to the question with the help of conversation history. If the contexts are irrelevant don't change the question. Give the question here:
+借助对话历史为问题添加必要的上下文。如果上下文不相关，则不要更改问题。在这里给出问题：
 ```
 
-### Use `Google_search` to search for related contents
+### 使用`Google_search`搜索相关内容
 ```javascript
 {{REFINED_QUESTION.completion.text}}
 ```
 
-### Use `Code Action` to extract content
+### 使用`代码动作`提取内容
 
 ```javascript
-// Extracts title, snipet and link from the google search's organic results.
-// capped at 3
+// 从谷歌搜索的有机结果中提取标题、摘要和链接
+// 限制为3个结果
 _fun = (env) => {
   if (!env.state.GOOGLE_SEARCH.organic_results) {
     return [
@@ -77,20 +77,20 @@ _fun = (env) => {
 }
 ```
 
-### Map the results for parallel processing
+### 映射结果以进行并行处理
 
 ```javascript
 SEARCH_EXTRACT
 ```
 
-### Use `WEB_CRAWL` to scan the page 
+### 使用`WEB_CRAWL`扫描页面
 ```javascript
 {{SEARCH_RESULT_LOOP.link}}
 ```
 
-### Use `Code Action` to extract content
+### 使用`代码动作`提取内容
 ```javascript
-// for each link, crawl its content and capped at 2000 bytes
+// 对每个链接，爬取其内容并限制在2000字节
 _fun = (env) => {
   return {
     content: env.state.WEB_CRAWL_1.data ? env.state.WEB_CRAWL_1.data[0].results[0].text.slice(0, 2000) : "",
@@ -98,27 +98,27 @@ _fun = (env) => {
 } 
 ```
 
-### Use LLM to analyze the contents
+### 使用LLM分析内容
 ```json
-{# Your prompt here, for example: 'Answer those question based on the following content.' #}
-{# Begin your prompt below: #}
+{# 在这里写入您的提示，例如：'根据以下内容回答这些问题。' #}
+{# 在下面开始您的提示： #}
 
-Given the following question:
+给定以下问题：
 """
 {{EXTRACT_QUESTION}}
 """
 
-Extract the text from the following content relevant to the question and summarize it:
+从以下内容中提取与问题相关的文本并进行总结：
 """
 {# {{GOOGLE_REFERENCES.content}} #}
 {{SEARCH_RESULT_LOOP.snippet}}
 """
 
-Extracted summarized content:
+提取的总结内容：
 """
 ```
 
-### Use `Code Action`` to extract content
+### 使用`代码动作`提取内容
 ```javascript
 _fun = (env) => {
   return {
@@ -128,18 +128,18 @@ _fun = (env) => {
 }
 ```
 
-Use `Code Action` to extract content and make prompt
+使用`代码动作`提取内容并制作提示
 ```javascript
 const _example = (example) => {
-  // prompt = `QUESTION: ${example.question}\n`;
-  let prompt = "CONTENT:\n";
+  // prompt = `问题：${example.question}\n`;
+  let prompt = "内容：\n";
   prompt += '"""\n';
   example.forEach((d, i) => {
     if (i > 0) {
       prompt += '\n';
     }
-    prompt += `link [${i}]: ${d.link}\n`;
-    prompt += `content: ${d.summary.replaceAll('\n', ' ')}\n`;
+    prompt += `链接 [${i}]: ${d.link}\n`;
+    prompt += `内容: ${d.summary.replaceAll('\n', ' ')}\n`;
   });
   prompt += '"""\n';
   console.log(prompt)
@@ -147,26 +147,26 @@ const _example = (example) => {
 }
 
 _fun = (env) => {
-  prompt = 'Given the following questions, reference links and associated content, create a final answer with references. If some of answer can be formatted in table format, format in table format. Answer should be accurate and concise. \n\n Never tell me "As a language model ..." or "As an artificial intelligence...", I already know you are a LLM. Just tell me the answer. \n\n';
+  prompt = '根据以下问题、参考链接和相关内容，创建一个带有引用的最终答案。如果部分答案可以用表格格式呈现，请使用表格格式。答案应准确简洁。\n\n 永远不要告诉我"作为一个语言模型..."或"作为一个人工智能..."，我已经知道你是LLM了。直接告诉我答案。\n\n';
   // env.state.EXAMPLES.forEach((e) => {
   // prompt += _example(e);
-  // prompt += `FINAL:\n"""\n${e.final}\n"""\n`;
+  // prompt += `最终答案：\n"""\n${e.final}\n"""\n`;
   // prompt += "\n";
   // });
-  prompt += "QUESTION:" + env.state.EXTRACT_QUESTION + "\n";
+  prompt += "问题：" + env.state.EXTRACT_QUESTION + "\n";
   prompt += _example(env.state.FORMAT_SUMMARY);
 
-  prompt += `FINAL:\n"""\n`;
+  prompt += `最终答案：\n"""\n`;
 
   return { prompt }
 }
 ```
 
-### Send the prompt to LLM
+### 将提示发送给LLM
 ```json
 {{FINAL_PROMPT.prompt}}
 ```
-### Extract `OUTPUT_STREAM` as output
+### 提取`OUTPUT_STREAM`作为输出
 ```json
 {{FINAL_PROMPT.prompt}}
 ```

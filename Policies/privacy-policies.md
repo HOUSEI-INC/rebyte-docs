@@ -1,17 +1,17 @@
-# Privacy Policies
+# 隐私政策
 
-At RealChar AI, we understand the importance of your privacy and we are committed to protecting it. This Privacy Policy explains how we collect, use, and disclose your personal information when you use our website, products, and services.
+在RealChar AI，我们理解您的隐私的重要性，并致力于保护它。本隐私政策解释了当您使用我们的网站、产品和服务时，我们如何收集、使用和披露您的个人信息。
 
-We take your privacy seriously and strive to ensure that your personal information is always kept safe and secure. To that end, we have implemented a number of security measures to prevent unauthorized access to your data.
+我们认真对待您的隐私，并努力确保您的个人信息始终保持安全。为此，我们实施了一系列安全措施来防止未经授权访问您的数据。
 
-Information we collect We may collect personal information such as your name, email address, and phone number when you sign up for our services or contact us for support. Additionally, we may collect information about your usage of our website and services, such as your IP address and browser type. We believe that transparency is key when it comes to collecting personal information, which is why we are always upfront about the data we collect and how we use it.
+信息收集 当您注册我们的服务或联系我们寻求支持时，我们可能会收集诸如您的姓名、电子邮件地址和电话号码等个人信息。此外，我们可能会收集有关您使用我们网站和服务的信息，如您的IP地址和浏览器类型。我们相信在收集个人信息时透明度是关键，这就是为什么我们始终明确说明我们收集的数据以及如何使用它。
 
-How we use your information We use your personal information to provide and improve our services, to communicate with you, and to comply with legal obligations. Your information may also be used for research and analysis purposes to improve our products and services. We understand that your personal information is valuable and we take great care to ensure that it is only used for the purposes for which it was collected.
+信息使用 我们使用您的个人信息来提供和改进我们的服务，与您沟通，并遵守法律义务。您的信息也可能用于研究和分析目的，以改进我们的产品和服务。我们理解您的个人信息是有价值的，我们非常注意确保它只用于收集时的目的。
 
-Disclosure of your information We do not sell or rent your personal information to third parties. However, we may share your information with our trusted partners who assist us in providing our services. We may also disclose your information if required by law or to protect our rights and interests. We believe that your personal information is just that - personal. That's why we will never share your data with anyone without your express consent.
+信息披露 我们不会将您的个人信息出售或出租给第三方。但是，我们可能会与协助我们提供服务的可信赖合作伙伴共享您的信息。如果法律要求或为了保护我们的权利和利益，我们也可能会披露您的信息。我们相信您的个人信息就是个人的。这就是为什么未经您的明确同意，我们绝不会与任何人共享您的数据。
 
-Security of your information We take reasonable steps to ensure the security of your personal information and prevent unauthorized access, use, or disclosure. However, no data transmission over the internet or electronic storage system can be guaranteed to be 100% secure. We understand that your personal information is precious and we will always strive to keep it safe and secure.
+信息安全 我们采取合理的步骤来确保您的个人信息的安全，并防止未经授权的访问、使用或披露。然而，通过互联网传输的数据或电子存储系统都不能保证100%安全。我们理解您的个人信息是宝贵的，我们将始终努力保持其安全。
 
-Changes to this Privacy Policy We may update this Privacy Policy from time to time and will notify you of any changes by posting the new policy on our website. Your continued use of our services after any such modifications will constitute your acknowledgement of the modified Privacy Policy and agreement to abide and be bound by the modified policy. We believe that transparency is key when it comes to privacy, which is why we will always keep you informed of any changes we make to our policies.
+隐私政策的变更 我们可能会不时更新本隐私政策，并通过在我们的网站上发布新政策来通知您任何变更。在任何此类修改后继续使用我们的服务，将构成您对修改后的政策的确认和同意遵守修改后的政策。我们相信在隐私方面透明度是关键，这就是为什么我们会始终让您了解我们对政策所做的任何更改。
 
-Contact us If you have any questions or concerns about our Privacy Policy, please contact us at support@rebyte.ai. We are always happy to help and will do our best to address any issues you may have.
+联系我们 如果您对我们的隐私政策有任何问题或疑虑，请通过support@rebyte.ai与我们联系。我们随时乐意提供帮助，并将尽最大努力解决您可能遇到的任何问题。

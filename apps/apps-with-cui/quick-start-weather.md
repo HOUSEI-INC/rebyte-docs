@@ -1,72 +1,72 @@
-# Quick Start
+# 快速入门
 
-We will show to how to build a simple weather app using the customized UI.
+我们将向您展示如何使用自定义UI构建一个简单的天气应用程序。
 
-## Step 1: Create an App
+## 步骤1：创建应用程序
 
-* Navigate to the "My Apps" tab in the sidebar and then click on "Create App" on the top right.
+* 在侧边栏导航到"我的应用程序"标签，然后点击右上角的"创建应用程序"。
 
-* Choose "App With Customized UI".
+* 选择"带自定义UI的应用程序"。
 
-* To build a basic version of your app, you can use the "image prompt" or the "text prompt". 
+* 要构建应用程序的基础版本，您可以使用"图像提示"或"文本提示"。
 
-* The "image prompt" is to draw the app on the canvas. You can use the tools on the bottom to draw a basic draft of your app interface.
+* "图像提示"是在画布上绘制应用程序。您可以使用底部的工具绘制应用程序界面的基本草图。
 
 <figure><img src="../../images/cui-1.png"></figure>
   
-* Choose the drawings on your canvas and click the "Make It An App" button when you are finished.
+* 选择您画布上的绘图，完成后点击"制作成应用程序"按钮。
 
 <figure><img src="../../images/cui-2.png"></figure>
   
-* Input "the "text prompt" to further describe the app using texts. 
+* 输入"文本提示"以使用文字进一步描述应用程序。
 
 <figure><img src="../../images/cui-3.png"></figure>
 
-* Click the "Make It An App" button to build the app.
+* 点击"制作成应用程序"按钮来构建应用程序。
 
 
-## Step 2: Design you App
+## 步骤2：设计您的应用程序
 
-* After the first step, you should be able to see the first draft of your app.
+* 完成第一步后，您应该能看到您的应用程序的第一个草稿。
 
 <figure><img src="../../images/cui-4.png"></figure>
 
-* You can make changes to the app by using the "image prompt" or "text prompt". It's just like the first step.
+* 您可以使用"图像提示"或"文本提示"对应用程序进行修改。这就像第一步一样。
 
-* To use image prompts, use the boxes, arrows and the texts to draw the changes you want to make on the canvas.
+* 要使用图像提示，使用方框、箭头和文字在画布上绘制您想要进行的更改。
   
-* To use the text prompt, click the "Make It An App" and input the text prompt describing the changes you want to make.
+* 要使用文本提示，点击"制作成应用程序"并输入描述您想要进行的更改的文本提示。
 
-* Click "Make It An App" again and we will make changes for you based on your prompt and create a new version of your app.
+* 再次点击"制作成应用程序"，我们将根据您的提示为您进行更改并创建应用程序的新版本。
 
-* **NOTE**: This may not give you the desired results on just one try. We recommend you to try and improve one thing at a time and create more versions until you get the best results.
+* **注意**：这可能不会一次就给您想要的结果。我们建议您每次尝试改进一件事，并创建更多版本，直到获得最佳结果。
 
-## Step 3: Connect your App with Agent
+## 步骤3：将您的应用程序与代理连接
 
-* Click the "Connect to Agent" on the top right.
+* 点击右上角的"连接到代理"。
 
 <figure><img src="../../images/cui-5-1.png"></figure>
 
-* Choose the agent you want to connect with and select the version.
+* 选择您想要连接的代理并选择版本。
 
 <figure><img src="../../images/cui-5-2.png"></figure>
 
-* **NOTE**: You must be familiar with the agent's function and the agent's input and output format. Make sure the agent is suitable for your app, otherwise it will not connect successfully.
+* **注意**：您必须熟悉代理的功能以及代理的输入和输出格式。确保代理适合您的应用程序，否则将无法成功连接。
 
-* Use the "image prompt" or "text prompt" to describe how you want to use the agent in your app. In this app, the input is a user query like:"What's the weather now in New York?". And the output is a url of a base64 formatted picture. So for the text prompt, I used `"Use the input box's content as the input of the agent and the url in the output as the picture on the app."`
+* 使用"图像提示"或"文本提示"来描述您想要如何在应用程序中使用代理。在这个应用程序中，输入是用户查询，如："纽约现在的天气怎么样？"。而输出是一个base64格式的图片URL。所以对于文本提示，我使用了`"使用输入框的内容作为代理的输入，并将输出中的url作为应用程序上的图片。"`
 
 <figure><img src="../../images/cui-6.png"></figure>
 
-* Click "Make It An App" and we will automatically connect your app with the chosen agent.
+* 点击"制作成应用程序"，我们将自动将您的应用程序与所选代理连接。
 
-* **NOTE**: It might take a few tries before the agent is successfully connected to your app, be patient! 
+* **注意**：在代理成功连接到您的应用程序之前可能需要几次尝试，请耐心等待！
   
-* The one text prompt is not enough for the app to connect to the agent so I then used `"The url of the output picture is base64 format. Display the picture on the app below the input box."`. After a few tries, the app should work normally.
+* 一个文本提示不足以让应用程序连接到代理，所以我接着使用了`"输出图片的url是base64格式。在输入框下方显示图片。"`。经过几次尝试后，应用程序应该能正常工作。
 
-## Tips
+## 提示
 
-* To get better results, try describing your functions/changes you'd like to make one at a time and in details. 
+* 要获得更好的结果，尝试一次详细描述一个您想要进行的功能/更改。
 
-* Make good use of the drawing tools to tell us the changes you want to make to the current app.
+* 充分利用绘图工具来告诉我们您想对当前应用程序进行的更改。
 
-* Each time you click "Make It An App", we will generate a new version of your app. If you find the results unsatifactory, simply go back to previous versions and start from there again.
+* 每次点击"制作成应用程序"，我们都会生成您的应用程序的新版本。如果您发现结果不满意，只需返回到之前的版本并从那里重新开始。

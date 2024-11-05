@@ -1,27 +1,27 @@
-- In the auto-generated template, we have already created some actions for you.
-- Add a "Knowledge Search" action using the plus button between different actions.
+- 在自动生成的模板中，我们已经为您创建了一些动作。
+- 使用不同动作之间的加号按钮添加一个"知识搜索"动作。
 
 
 <figure><img src="../../images/deign-your-agent-1.png"></figure>
 
-- Choose the knowledge base you just created and set the number of results. This action allows you to perform a search on the given knowledge base and return the results.
-- You can see all the search results in the chunks.
+- 选择您刚刚创建的知识库并设置结果数量。此动作允许您在给定的知识库上执行搜索并返回结果。
+- 您可以在块中看到所有的搜索结果。
 
 <figure><img src="../../images/deign-your-agent-2.png"></figure>
 
-- For better usage, we have three "Code" actions in this agent.
-    - The first one is to extract content from the latest message.
+- 为了更好地使用，我们在这个代理中有三个"代码"动作。
+    - 第一个是从最新消息中提取内容。
         
         <figure><img src="../../images/deign-your-agent-3.png"></figure>
         
-    - The second "Code" action is to concatenate the results from the "Knowledge Search" action.
+    - 第二个"代码"动作是连接"知识搜索"动作的结果。
         
         <figure><img src="../../images/deign-your-agent-4.png"></figure>
         
-    - We use another "Code" action called "Generate Answer" to concatenate the search results and the response.
+    - 我们使用另一个名为"生成答案"的"代码"动作来连接搜索结果和响应。
         
         <figure><img src="../../images/deign-your-agent-5.png"></figure>
         
-- Now use a "Language Model Chat Interface" action to get a response based on the search results.
-- Write the instructions for the model in the editor, describing what you want the model to do. And the model will generate a response for you.
+- 现在使用"语言模型聊天界面"动作基于搜索结果获取响应。
+- 在编辑器中为模型编写指令，描述您想要模型做什么。模型将为您生成响应。
 <figure><img src="../../images/deign-your-agent-6.png"></figure>

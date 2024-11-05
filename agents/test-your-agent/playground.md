@@ -1,7 +1,7 @@
-# Playground
+# 测试场
 
-Here, you can test your agent with arbitrary input data.  
+在这里，您可以使用任意输入数据测试您的代理。
 
-Note that the data you use in playground must be a json object.
+请注意，在测试场中使用的数据必须是json对象格式。
 
 <figure><img src="../../images/playground.png" alt=""></figure>

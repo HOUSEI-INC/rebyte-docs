@@ -1,9 +1,9 @@
-# Bilibili subtitle agent
+# Bilibili字幕代理
 
-Help you get bilibili subtitles and summarize the content.
+帮助您获取bilibili字幕并总结内容。
 
 
-### Setup the testing data in `Datasets`
+### 在`数据集`中设置测试数据
 
 ```json
 [
@@ -15,59 +15,59 @@ Help you get bilibili subtitles and summarize the content.
 ```
 
 
-### Extract content from `Code Action`
+### 从`代码动作`中提取内容
 
 ```js
 _fun = (env) => {
-  // use `env.state.Action_NAME` to refer output from previous Actions.
+  // 使用 `env.state.Action_NAME` 来引用前面动作的输出。
   return env.state.INPUT.messages.slice(-1)[0].content
 } 
 ```
 
-### Use LLM to process user's input
+### 使用LLM处理用户的输入
 
 ```javascript
 _fun = (env) => {
-  // use `env.state.Action_NAME` to refer output from previous Actions.
+  // 使用 `env.state.Action_NAME` 来引用前面动作的输出。
  return env.state.GET_BV.completion.text
 }
 ```
 
-### Extract content from `Code Action`
+### 从`代码动作`中提取内容
 
 ```javascript
 _fun = (env) => {
-  // use `env.state.Action_NAME` to refer output from previous Actions.
+  // 使用 `env.state.Action_NAME` 来引用前面动作的输出。
  return env.state.GET_BV.completion.text
 }
 ```
 
-### Use `Http Request Maker` and request for CID
+### 使用`HTTP请求制作器`请求CID
 
 ```javascript
 api.bilibili.com/x/player/pagelist?bvid={{BV}}
 ```
 
-### Extract content from `Code Action`
+### 从`代码动作`中提取内容
 
 ```javascript
 _fun = (env) => {
-  // use `env.state.Action_NAME` to refer output from previous Actions.
+  // 使用 `env.state.Action_NAME` 来引用前面动作的输出。
  return env.state.GET_CID.body.data[0].cid
 }
 ```
 
-### Use `Http Request Maker` and request for the url for subtitles
+### 使用`HTTP请求制作器`请求字幕的URL
 
 ```javascript
 api.bilibili.com/x/player/v2?bvid={{BV}}&cid={{CID}}
 ```
 
-### Extract content from `Code Action`
+### 从`代码动作`中提取内容
 
 ```javascript
 _fun = (env) => {
-  // use `env.state.Action_NAME` to refer output from previous Actions.
+  // 使用 `env.state.Action_NAME` 来引用前面动作的输出。
   // const data = JSON.stringify(env.state.GET_URL.body)
   // const regex = /<subtitle>(.*?)<\/subtitle>/;
   // const match = data.match(regex);
@@ -81,17 +81,17 @@ _fun = (env) => {
 }
 ```
 
-### Use `Http Request Maker` and request for the subtitles
+### 使用`HTTP请求制作器`请求字幕
 
 ```javascript
 {{GET_CC_URL}}
 ```
 
-### Extract content from `Code Action`
+### 从`代码动作`中提取内容
 
 ```javascript
 _fun = (env) => {
-  // use `env.state.Action_NAME` to refer output from previous Actions.
+  // 使用 `env.state.Action_NAME` 来引用前面动作的输出。
   let arr = []
   for(let i in env.state.GET_CC.body.body) {
     arr.push(env.state.GET_CC.body.body[i].content)
@@ -100,27 +100,27 @@ _fun = (env) => {
 }
 ```
 
-### Send subtitles to the LLM to summarize
+### 发送字幕给LLM进行总结
 ```json
 {% if GET_URL.body.data.subtitle.subtitles[0].subtitle_url == "" %}
-please reply to me with the phrase: "I apologize for being unable to retrieve content from the URL you provided. Please verify the correctness of the web address"
+请用以下短语回复我："抱歉，我无法从您提供的URL获取内容。请验证网址的正确性"
 
 {% else %}
-You are an AI with advanced comprehension and summarization skills. Your task is to read the following passage and provide a concise, clear summary that captures the main points and key details. 
+您是一个具有高级理解和总结能力的AI。您的任务是阅读以下段落并提供一个简洁、清晰的总结，捕捉主要观点和关键细节。
 
-Passage: 
+段落：
 {{CC}}
 
-Please provide a summary of the above passage and respond to me in Chinese.
+请提供上述段落的总结并用中文回复我。
 
 {% endif %}
 ```
 
-### Extract content from `Code Action`
+### 从`代码动作`中提取内容
 
 ```javascript
 _fun = (env) => {
-  // use `env.state.Action_NAME` to refer output from previous Actions.
+  // 使用 `env.state.Action_NAME` 来引用前面动作的输出。
  return {
    role: "assistant",
    content: env.state.OUTPUT_STREAM.completion.text,
@@ -129,4 +129,4 @@ _fun = (env) => {
 }
 ```
 
-### Output the final results
+### 输出最终结果

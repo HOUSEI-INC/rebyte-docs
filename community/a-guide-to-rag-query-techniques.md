@@ -1,83 +1,83 @@
-# A Guide to 4 Key RAG Techniques
+# 4个关键RAG技术指南
 
-Welcome to our comprehensive overview of query translation techniques in Retriever-Augmented Generation (RAG) pipelines. In this series, we've explored four innovative methods revolutionizing user query processing. These are Multi-Query Translation, RAG Fusion, Decomposition, and Step-Back Prompting. We'll demonstrate how these techniques can be implemented in ReByte, complete with agent and app examples.
+欢迎阅读我们关于检索增强生成(RAG)管道中查询转换技术的综合概述。在本系列中，我们探讨了四种革新用户查询处理的创新方法。这些是多查询转换、RAG融合、分解和后退提示。我们将演示如何在ReByte中实现这些技术，并提供完整的代理和应用程序示例。
 
-## 1. Multi-Query Translation
+## 1. 多查询转换
 
-Multi-Query Translation diversifies a user's query by rephrasing it into various forms. In ReByte, this is achieved using the "LLM-chat" action to generate multiple queries from a single user question. 
+多查询转换通过将用户的查询重新表述为各种形式来使其多样化。在ReByte中，这是通过使用"LLM-chat"动作从单个用户问题生成多个查询来实现的。
 
-Here's the prompt for the LLM.
+这是LLM的提示。
 
 <figure><img src="../images/multi-query-1.png" alt=""></figure>
 
-And the LLM generates three sub-queries.
+LLM生成三个子查询。
 
 <figure><img src="../images/multi-query-2.png" alt=""></figure>
 
-This technique enhances the likelihood of retrieving relevant information, as each query version might align differently with the documents in the database.
+这种技术提高了检索相关信息的可能性，因为每个查询版本可能与数据库中的文档有不同的匹配方式。
 
-For implementation, we use "Map-Reduce" and "Knowledge Search" actions to retrieve information for each query, followed by another "LLM-chat" action to summarize the results.
+在实现中，我们使用"Map-Reduce"和"知识搜索"动作为每个查询检索信息，然后使用另一个"LLM-chat"动作来总结结果。
 
 <figure><img src="../images/multi-query-3.png" alt=""></figure>
 
-[Agent Demo for Multi-Query](https://rebyte.ai/p/21b2295005587a5375d8/callable/cd26de3861da546c210f/editor)
+[多查询的代理演示](https://rebyte.ai/p/21b2295005587a5375d8/callable/cd26de3861da546c210f/editor)
 
-[App Demo for Multi-Query](https://rebyte.ai/copilot/55f1b8fb7803c73c88d6/session/7bca7a6793)
+[多查询的应用程序演示](https://rebyte.ai/copilot/55f1b8fb7803c73c88d6/session/7bca7a6793)
 
-## 2. RAG Fusion
+## 2. RAG融合
 
-RAG Fusion, an extension of Multi-Query Translation, includes a crucial reciprocal rank fusion step. This method consolidates results from multiple queries into a single, optimized list, making it ideal for comprehensive information retrieval.
+RAG融合是多查询转换的扩展，包括一个关键的倒数排名融合步骤。这种方法将多个查询的结果整合成一个优化的列表，使其非常适合全面的信息检索。
 
-Here's the prompt for the LLM.
+这是LLM的提示。
 
 <figure><img src="../images/rag-fusion-1.png" alt=""></figure>
 
-And the LLM generates three sub-queries.
+LLM生成三个子查询。
 
 <figure><img src="../images/rag-fusion-2.png" alt=""></figure>
 
-RAG Fusion is demonstrated in ReByte through a similar process of generating multiple queries and retrieving documents.
+RAG融合在ReByte中通过类似的生成多个查询和检索文档的过程来演示。
 
-[Agent Demo for RAG Fusion](https://rebyte.ai/p/21b2295005587a5375d8/callable/103ce69a89b657efdfc0/editor)
+[RAG融合的代理演示](https://rebyte.ai/p/21b2295005587a5375d8/callable/103ce69a89b657efdfc0/editor)
 
-[App Demo for RAG Fusion](https://rebyte.ai/copilot/1583ecb2733c95dea108/session/8ccc51d47f)
+[RAG融合的应用程序演示](https://rebyte.ai/copilot/1583ecb2733c95dea108/session/8ccc51d47f)
 
-## 3. Decomposition
+## 3. 分解
 
-Decomposition addresses complex queries by breaking them into smaller sub-questions, each solved independently. This approach, demonstrated in ReByte, simplifies the retrieval process and allows for detailed responses.
+分解通过将复杂查询分解成更小的子问题来处理，每个子问题都独立解决。这种方法在ReByte中得到演示，它简化了检索过程并允许详细的响应。
 
-Here's the prompt for the LLM.
+这是LLM的提示。
 
 <figure><img src="../images/decompositon-1.png" alt=""></figure>
 
-And the LLM generates three sub-queries.
+LLM生成三个子查询。
 
 <figure><img src="../images/decomposition-2.png" alt=""></figure>
 
-Here, the "LLM-chat" action is used to generate sub-queries, which are then rocessed to form a comprehensive answer.
+在这里，使用"LLM-chat"动作生成子查询，然后处理这些查询以形成全面的答案。
 
-[Agent Demo for Decomposition](https://rebyte.ai/p/21b2295005587a5375d8/callable/99a7ce76993d93a43411/editor)
+[分解的代理演示](https://rebyte.ai/p/21b2295005587a5375d8/callable/99a7ce76993d93a43411/editor)
 
-[App Demo for Decomposition](https://rebyte.ai/copilot/b4c3ba4609e740a0a3d3/session/b0048540a6)
+[分解的应用程序演示](https://rebyte.ai/copilot/b4c3ba4609e740a0a3d3/session/b0048540a6)
 
-## 4. Step-Back Prompting
+## 4. 后退提示
 
-Step-Back Prompting abstracts a specific query into a more general one, broadening the scope of information retrieval. In ReByte, this method generates high-level questions from specific queries, facilitating the retrieval of a wider range of related information.
+后退提示将特定查询抽象为更一般的查询，扩大信息检索的范围。在ReByte中，这种方法从特定查询生成高层次问题，促进更广泛相关信息的检索。
 
-Here's the prompt for the LLM.
+这是LLM的提示。
 
 <figure><img src="../images/step-back-1.png" alt=""></figure>
 
-And the LLM generates three more general query.
+LLM生成三个更一般的查询。
 
 <figure><img src="../images/step-back-2.png" alt=""></figure>
 
-This technique is particularly effective in contexts where background information is as crucial as the query's specific details.
+这种技术在背景信息与查询具体细节同样重要的情况下特别有效。
 
-[Agent Demo for Step-Back Prompting](https://rebyte.ai/p/21b2295005587a5375d8/callable/069845d6d867c11ef32d/editor)
+[后退提示的代理演示](https://rebyte.ai/p/21b2295005587a5375d8/callable/069845d6d867c11ef32d/editor)
 
-[App Demo for Step-Back Prompting](https://rebyte.ai/copilot/f527fbc4eca2d3fe326f/session/1dd77d8bd5)
+[后退提示的应用程序演示](https://rebyte.ai/copilot/f527fbc4eca2d3fe326f/session/1dd77d8bd5)
 
-## Conclusion
+## 结论
 
-These query translation techniques form a robust toolkit in RAG systems, ensuring accurate, relevant, and comprehensive information retrieval. Multi-Query Translation and RAG Fusion expand search scope, Decomposition simplifies complex queries, and Step-Back Prompting elevates queries to a more abstract level. Stay tuned for further insights and advancements in query translation and RAG pipelines.
+这些查询转换技术在RAG系统中形成了一个强大的工具包，确保准确、相关和全面的信息检索。多查询转换和RAG融合扩展搜索范围，分解简化复杂查询，后退提示将查询提升到更抽象的层次。请继续关注查询转换和RAG管道的进一步见解和进展。

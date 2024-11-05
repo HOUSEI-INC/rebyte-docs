@@ -1,17 +1,17 @@
-# Term of Service
+# 服务条款
 
-Welcome to RealChar AI! Please read these terms of service carefully before using our services. By accessing or using our services, you agree to be bound by these terms.
+欢迎使用RealChar AI！在使用我们的服务之前，请仔细阅读这些服务条款。通过访问或使用我们的服务，您同意受这些条款的约束。
 
-1. Use of Services RealChar AI provides its services to you, subject to these terms of service. You may use our services only for lawful purposes and in accordance with these terms. By using our services, you represent and warrant that you are at least 18 years old.
+1. 服务使用 RealChar AI根据这些服务条款向您提供服务。您只能出于合法目的并按照这些条款使用我们的服务。通过使用我们的服务，您声明并保证您至少年满18岁。
 
-2. Intellectual Property Rights The content and materials available onRealChar AI, including but not limited to text, graphics, logos, button icons, images, audio clips, data compilations, and software, are the property of RealChar AI or its content suppliers and are protected by copyright laws.
+2. 知识产权 RealChar AI上提供的内容和材料，包括但不限于文本、图形、标志、按钮图标、图像、音频剪辑、数据编译和软件，都是RealChar AI或其内容供应商的财产，受版权法保护。
 
-3. User Content You retain all rights in, and are solely responsible for, the content you submit to RealChar AI. You grantRealChar AI a non-exclusive, worldwide, perpetual, irrevocable, royalty-free, sublicensable, and transferable license to use, reproduce, distribute, prepare derivative works of, display, and perform your content in connection with the services provided byRealChar AI and its successors and affiliates.
+3. 用户内容 您保留您提交给RealChar AI的内容的所有权利，并对其承担全部责任。您授予RealChar AI一个非独占的、全球性的、永久的、不可撤销的、免版税的、可再许可的和可转让的许可，以使用、复制、分发、准备衍生作品、展示和执行您的内容，用于RealChar AI及其继承者和附属机构提供的服务。
 
-4. Limitation of Liability RealChar AI shall not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits or revenues, whether incurred directly or indirectly, or any loss of data, use, goodwill, or other intangible losses resulting from your access to or use of or inability to access or use the services provided by RealChar AI, including, without limitation, any damages resulting from or related to any failures of performance, error, omission, interruption, defect, delay in operation or transmission, computer virus, or line failure.
+4. 责任限制 RealChar AI不对任何间接的、偶然的、特殊的、后果性的或惩罚性的损害，或任何利润或收入的损失负责，无论是直接还是间接产生的，也不对任何数据、使用、商誉或其他无形损失负责，这些损失是由于您访问或使用或无法访问或使用RealChar AI提供的服务而造成的，包括但不限于任何性能故障、错误、遗漏、中断、缺陷、操作或传输延迟、计算机病毒或线路故障。
 
-5. Indemnification You agree to indemnify, defend, and hold harmless RealChar AI, its affiliates, officers, directors, employees, agents, licensors, and suppliers from and against all claims, liabilities, damages, judgments, awards, losses, costs, expenses, or fees (including reasonable attorneys' fees) arising out of or related to your violation of these terms of service or your use of the services provided by RealChar AI.
+5. 赔偿 您同意赔偿、保护并使RealChar AI、其附属机构、管理人员、董事、员工、代理人、许可人和供应商免受因您违反这些服务条款或您使用RealChar AI提供的服务而产生的或与之相关的所有索赔、责任、损害、判决、奖励、损失、成本、费用或费用（包括合理的律师费）的损害。
 
-6. Termination RealChar AI reserves the right to terminate your access to all or any part of the services provided by RealChar AI at any time, with or without cause, with or without notice, effective immediately. If you wish to terminate your account, you may simply discontinue using the services provided by RealChar AI.
+6. 终止 RealChar AI保留随时终止您访问RealChar AI提供的所有或任何部分服务的权利，无论是否有原因，无论是否通知，立即生效。如果您希望终止您的账户，您可以简单地停止使用RealChar AI提供的服务。
 
-These terms of service constitute the entire agreement between you andRealChar AI and govern your use of the services provided by RealChar AI, superseding any prior agreements between you and RealChar AI. If any provision of these terms of service is held to be invalid or unenforceable, such provision shall be struck and the remaining provisions shall be enforced.
+这些服务条款构成您与RealChar AI之间的完整协议，并管理您对RealChar AI提供的服务的使用，取代您与RealChar AI之间的任何先前协议。如果这些服务条款的任何条款被认定为无效或不可执行，该条款应被删除，其余条款应继续执行。

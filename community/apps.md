@@ -1,6 +1,6 @@
-# Community Apps
+# 社区应用程序
 
-Under the "Apps" section, you can find apps that are built by the ReByte team. 
+在"应用程序"部分，您可以找到由ReByte团队构建的应用程序。
 
 <figure><img src="../images/com-apps.png" alt=""></figure>
 

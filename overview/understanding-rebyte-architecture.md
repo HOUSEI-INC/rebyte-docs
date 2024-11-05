@@ -1,45 +1,45 @@
-# Agent and Knowledge
+# 代理和知识
 
-## Agent
+## 代理
 
-> Backend subroutine for Assistant.
+> 助手的后端子程序。
 
-In Rebyte, we define agent as a serverless API that can be executed on cloud, usually agents will leverage AI models to perform some tasks to achieve its intelligence, but this is not required. An agent without any AI model is just like a normal serverless API, but we will focus on AI agents in this document.
-Here are some typical examples of AI agents:
-* Based on user's query, find most relevant information from user's knowledge base, and summarize the result and return summary to user.
-* User describes a database query in natural language, agent will translate the query into SQL and execute the query on user's database to get results, then use LLM to generate a summary of the results and return to user.
-* Help user to do professional translation between two languages, user can describe the translation task in natural language, agent will not only do the translation but also evaluate the translation quality, if the quality is not good enough, agent will iterate the translation process until the quality is good enough. 
+在Rebyte中，我们将代理定义为可以在云端执行的无服务器API。通常代理会利用AI模型来执行一些任务以实现其智能，但这不是必需的。没有任何AI模型的代理就像一个普通的无服务器API，但在本文档中我们将重点关注AI代理。
+以下是一些典型的AI代理示例：
+* 基于用户的查询，从用户的知识库中找到最相关的信息，总结结果并返回给用户。
+* 用户用自然语言描述数据库查询，代理将查询转换为SQL并在用户的数据库上执行查询以获取结果，然后使用LLM生成结果的摘要并返回给用户。
+* 帮助用户进行两种语言之间的专业翻译，用户可以用自然语言描述翻译任务，代理不仅会进行翻译，还会评估翻译质量，如果质量不够好，代理会迭代翻译过程直到质量达标。
 
-### This is a typical agent workflow
+### 这是一个典型的代理工作流程
 
 <figure><img src="../.gitbook/assets/2.png" alt=""><figcaption></figcaption></figure>
 
-* Agent is a piece of sequential actions that can be executed on the LLM serverless runtime. It is the core building block of ReByte, and the main way for end users to create their own tools. Rebyte provides a GUI builder for end users to create/edit their own LLM agents. Rebyte provides a list of pre-built actions for common use cases, also private SDK for _software engineer_ to build their own actions, and seamlessly integrate with the agent builder. Pre-built actions includes:
-  * LLM Actions
-    * Language Model Completion Interface
-    * Language Model Chat Interface
-  * Data Actions
-    * Dataset Loader, load pre defined datasets for later processing
-    * File Loader, extract/transform/load user's provided files
-    * Semantic Search, search for similar content over user's knowledge base
-  * Tools Actions
-    * Search Engine, search for information on Google/Bing
-    * Web Crawler, crawl web pages and extract information
-    * Http Request Maker, make any http request to any public/private API
-  * Control flow Actions
-    * Loop Until, run actions until a condition is met
-    * Parallel, execute multiple actions in parallel
-    * Vanilla Javascript, execute any vanilla javascript code, useful for doing pure data transformation
+* 代理是一系列可以在LLM无服务器运行时上执行的顺序动作。它是ReByte的核心构建块，也是终端用户创建自己工具的主要方式。Rebyte为终端用户提供了一个GUI构建器来创建/编辑他们自己的LLM代理。Rebyte提供了一系列针对常见用例的预构建动作，同时也为_软件工程师_提供了私有SDK来构建他们自己的动作，并无缝集成到代理构建器中。预构建动作包括：
+  * LLM动作
+    * 语言模型补全接口
+    * 语言模型聊天接口
+  * 数据动作
+    * 数据集加载器，加载预定义的数据集以供后续处理
+    * 文件加载器，提取/转换/加载用户提供的文件
+    * 语义搜索，在用户的知识库中搜索相似内容
+  * 工具动作
+    * 搜索引擎，在Google/Bing上搜索信息
+    * 网页爬虫，爬取网页并提取信息
+    * HTTP请求制作器，向任何公共/私有API发出任何http请求
+  * 控制流动作
+    * 循环直到，运行动作直到满足条件
+    * 并行，并行执行多个动作
+    * 原生JavaScript，执行任何原生javascript代码，对纯数据转换很有用
 
-## Knowledge - capture private data
+## 知识 - 捕获私有数据
 
-> Ingredient for your Assistant.
+> 您的助手的原料。
 
-* Knowledge is private data that is stored in rebyte managed vector database. Rebyte currently provides following connectors for end users to import their knowledge:
-  * Local file, supported file types are:
+* 知识是存储在rebyte管理的向量数据库中的私有数据。Rebyte目前为终端用户提供以下连接器来导入他们的知识：
+  * 本地文件，支持的文件类型有：
     * "doc", "docx", "img", "epub", "jpeg", "jpg", "png", "xls", "xlsx", "ppt", "pptx", "md", "txt", "rtf", "rst", "pdf", "json", "html"
   * Notion
   * Discord
   * GitHub
-  * More connectors are coming soon
-* Knowledge can be used in LLM Agents to do semantic search, or to do data augmentation. A great example is to use knowledge to do semantic search on a user's private knowledge base, and use the search result to do data augmentation for a language model, aka **Retrieval Augmented Generation**.
+  * 更多连接器即将推出
+* 知识可以在LLM代理中用于进行语义搜索，或进行数据增强。一个很好的例子是使用知识在用户的私有知识库上进行语义搜索，并使用搜索结果为语言模型进行数据增强，即**检索增强生成**。

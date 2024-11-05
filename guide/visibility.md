@@ -1,27 +1,27 @@
-# Visibility
+# 可见性
 
-In ReByte, you can set the visibility of your agent, app and knowledge.
+在ReByte中，您可以设置代理、应用程序和知识的可见性。
 
-## Agent
+## 代理
 
-For agents, we provide 3 visibility options:
+对于代理，我们提供3种可见性选项：
 
-* Public: Anyone can see and clone your agent, but only you can edit the agent and see the runs.
-* Private: Only you can see your agent.
-* Unlisted: Anyone with the link can see your agent, but only you can edit the agent and see the runs.
+* 公开：任何人都可以查看和克隆您的代理，但只有您可以编辑代理和查看运行记录。
+* 私有：只有您可以查看您的代理。
+* 未列出：任何有链接的人都可以查看您的代理，但只有您可以编辑代理和查看运行记录。
 
-## App
+## 应用程序
 
-For apps, we provide 3 visibility options:
+对于应用程序，我们提供3种可见性选项：
 
-* Public: Anyone can see and use your app.
-* Private: Only you can see and edit your app.
-* Unlisted: Anyone with the link can use your app, but only you can edit the app.
+* 公开：任何人都可以查看和使用您的应用程序。
+* 私有：只有您可以查看和编辑您的应用程序。
+* 未列出：任何有链接的人都可以使用您的应用程序，但只有您可以编辑应用程序。
 
-## Knowledge
+## 知识
 
-For knowledge, we provide 2 visibility options:
+对于知识，我们提供2种可见性选项：
 
-* Public: Anyone can see your knowledge.
-* Private: Only you and people you invite can see your knowledge.
+* 公开：任何人都可以查看您的知识。
+* 私有：只有您和您邀请的人可以查看您的知识。
 

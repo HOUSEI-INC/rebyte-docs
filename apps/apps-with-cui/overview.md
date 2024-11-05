@@ -1,14 +1,13 @@
+# 概述
 
-## Before you start
+## 开始之前
 
-Before building an app, you need to think about **what you want your app to do**. Then, think about the **input,data flow and output** of the agent this app will connect with. 
-# Overview
+在构建应用程序之前，您需要思考**您希望您的应用程序做什么**。然后，思考这个应用程序将要连接的代理的**输入、数据流和输出**。
 
+例如，如果您想构建一个可以获取当前天气并为您绘制描述天气的图片的应用程序。
 
-For example, if you want to build an App that can get the current weather and draw a picture descibing the weather for you. 
-
-* First think about that the user's query will be. In this case, the input would be a city name or a sentence like "What's the weather in New York?". 
-* Then, think about how the agent should get the weather information. In ReByte, we provide tools like "Google Search" or "You.com search" to help you get the information you want. Here, you can use "You.com search" to get the weather information.
-* Also, think about the data the agent should send the to your app. For example, to send the weather information, should you send a plain text or JSON data?
-* Finally, think about how the user interface of your app should look like: where to get the input, where to display the output and how the app should react to the user's input.
-* Once you have a clear idea of what you want your app to do, you can start building your app and agent.
+* 首先思考用户的查询会是什么。在这种情况下，输入可能是城市名称或类似"纽约的天气怎么样？"这样的句子。
+* 然后，思考代理应该如何获取天气信息。在ReByte中，我们提供了"Google搜索"或"You.com搜索"等工具来帮助您获取所需的信息。在这里，您可以使用"You.com搜索"来获取天气信息。
+* 同时，思考代理应该向您的应用程序发送什么数据。例如，要发送天气信息，您应该发送纯文本还是JSON数据？
+* 最后，思考您的应用程序的用户界面应该是什么样子：在哪里获取输入，在哪里显示输出，以及应用程序应该如何响应用户的输入。
+* 一旦您对您想要您的应用程序做什么有了清晰的想法，您就可以开始构建您的应用程序和代理了。

@@ -1,23 +1,23 @@
-# Knowledge Based Chatbot
+# 基于知识的聊天机器人
 
-### Create Knowledge
+### 创建知识
 
-Under Knowledge tab, click `Create Knowledge`. Fill in the name and description, choose the correct knowledge type and set up the maximum chunck of size.
+在知识标签下，点击`创建知识`。填写名称和描述，选择正确的知识类型并设置最大块大小。
 
-For more details, please check the Knowledge section.
+有关更多详细信息，请查看知识部分。
 
-### Create Agent
+### 创建代理
 
-To create an agent，choose `retrieval based chatbot with own data` as template.
+要创建代理，选择`基于自有数据的检索聊天机器人`作为模板。
 
 <figure><img src="../../builders-guide/use-cases/.gitbook/assets/knowledge-chatbot-1.img" alt=""><figcaption></figcaption></figure>
 
-In `RETRIEVALS`, choose the `Knowlegde` you created above. Click `run TestCases`. If there's no problem with the test, you can deploy the agent. For more details, please check the Agent section.
+在`RETRIEVALS`中，选择您在上面创建的`知识`。点击`运行测试用例`。如果测试没有问题，您就可以部署代理了。有关更多详细信息，请查看代理部分。
 
-### Create Apps
+### 创建应用程序
 
-Under the `Apps` tab, choose `Create App` and fill in the `Chat App Name` and `Description`. Choose the agent and knowledge that you just created in the above steps.
+在`应用程序`标签下，选择`创建应用程序`并填写`聊天应用程序名称`和`描述`。选择您在上述步骤中刚刚创建的代理和知识。
 
 <figure><img src="../../builders-guide/use-cases/.gitbook/assets/knowledge-chatbot-2.img" alt=""><figcaption></figcaption></figure>
 
-After completion, you can communicate with the chatbot, and your chatbot will have the knowledge in the knowledge base choose.
+完成后，您可以与聊天机器人进行交流，您的聊天机器人将拥有所选知识库中的知识。

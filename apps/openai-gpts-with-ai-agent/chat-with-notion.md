@@ -1,25 +1,25 @@
-# Chat with Notion
+# 与Notion对话
 
-Today I'm going to show you how to use Notion pages as a knowledge base for GPT.
+今天我将向您展示如何使用Notion页面作为GPT的知识库。
 
-## Step 1: Create Knowledge with Notion
+## 步骤1：使用Notion创建知识
 
-- Navigate to the Knowledge page and create a new knowledge.
-
-<figure><img src="../../images/%25E6%2588%25AA%25E5%25B1%258F2024-01-11_16.58.50.png"></figure>
-
-
-- Fill in the name and description of the knowledge.
+- 导航到知识页面并创建新的知识。
 
 <figure><img src="../../images/%25E6%2588%25AA%25E5%25B1%258F2024-01-11_16.58.50.png"></figure>
 
-- Since we are using Notion as the knowledge base, we need to select `Notion` as the knowledge source.
+
+- 填写知识的名称和描述。
+
+<figure><img src="../../images/%25E6%2588%25AA%25E5%25B1%258F2024-01-11_16.58.50.png"></figure>
+
+- 由于我们使用Notion作为知识库，我们需要选择`Notion`作为知识来源。
 
 <figure><img src="../../images/%25E6%2588%25AA%25E5%25B1%258F2024-01-11_17.00.17.png"></figure>
 
-- Choose a chunk size and create knowledge.
+- 选择块大小并创建知识。
 
-- Connect your Notion account to ReByte and choose the page you want to use.
+- 将您的Notion账户连接到ReByte并选择您想要使用的页面。
 
 <figure><img src="../../images/%25E6%2588%25AA%25E5%25B1%258F2024-01-11_17.01.41.png"></figure>
 
@@ -27,51 +27,51 @@ Today I'm going to show you how to use Notion pages as a knowledge base for GPT.
 <figure><img src="../../images/%25E6%2588%25AA%25E5%25B1%258F2024-01-11_17.01.41%201.png"></figure>
 
 
-- Now you should have your knowledge of the content from Notion.
+- 现在您应该已经有了来自Notion的内容知识。
 
 <figure><img src="../../images/%25E6%2588%25AA%25E5%25B1%258F2024-01-11_17.04.55.png"></figure>
 
-## Step 2: Clone Agent
+## 步骤2：克隆代理
 
-- In Community select the tab "GPT Builder Actions" and click “knowledge_search_agent_for_gpts”
+- 在社区中选择"GPT构建器动作"标签并点击"knowledge_search_agent_for_gpts"
 
 <figure><img src="../../images/Untitled.png"></figure>
 
-- copy it to your own project
+- 将其复制到您自己的项目中
   
 <figure><img src="../../images/Untitled%201.png"></figure>
 
 
-## Step 3: Select your knowledges and **Deploy it**
+## 步骤3：选择您的知识并**部署它**
 
-- Find the action called RETRIEVALS and select the knowledge you created
+- 找到名为RETRIEVALS的动作并选择您创建的知识
 
 
 <figure><img src="../../images/Untitled%202.png"></figure>
 
-- Run TestCases and deploy it
+- 运行测试用例并部署它
 
-If want to know how to design this agent, see [here](https://rebyte-ai.gitbook.io/rbyte/apps/openai-gpts-with-ai-agent/design-your-agent).
+如果想了解如何设计这个代理，请参见[这里](https://rebyte-ai.gitbook.io/rbyte/apps/openai-gpts-with-ai-agent/design-your-agent)。
 
-## Step 4: Create GPTs with ReByte API
+## 步骤4：使用ReByte API创建GPTs
 
-- Fill in the name, description, and avatar for your GPTs.
+- 填写您的GPTs的名称、描述和头像。
 
 
 <figure><img src="../../images/Untitled%203.png"></figure>
 
-- Copy and paste the OpenAPI code for the corresponding version of your ReByte Agent into the Action of GPTs, and set **Authentication** as API Key.
+- 将您的ReByte代理相应版本的OpenAPI代码复制并粘贴到GPTs的动作中，并将**认证**设置为API密钥。
 
 <figure><img src="../../images/Untitled%204.png"></figure>
 
 <figure><img src="../../images/Untitled%205.png"></figure>
 
-- Fill in ReByte's API key (**Select Bearer for Auth Type**).
+- 填写ReByte的API密钥（**选择Bearer作为认证类型**）。
 
 <figure><img src="../../images/Untitled%206.png"></figure>
 
-- Save and release your GPTs!
-- Now you can use it!
+- 保存并发布您的GPTs！
+- 现在您可以使用它了！
 
 
 <figure><img src="../../images/Untitled%207.png"></figure>

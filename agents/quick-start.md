@@ -1,65 +1,65 @@
-# Quick Start
+# 快速入门
 
-We will show you how to build a grammar agent in 5 minutes.
+我们将向您展示如何在5分钟内构建一个语法代理。
 
-## Step 1: Create an Agent
+## 步骤1：创建代理
 
-* Navigate to the "My Agents" tab in the sidebar and then click on "Create Agent".
+* 在侧边栏导航到"我的代理"标签，然后点击"创建代理"。
 
-* Describe what you want to do with this agent and choose the right template for your agent. 
+* 描述您想要用这个代理做什么，并为您的代理选择合适的模板。
 
 <figure><img src="../images/8.png" alt=""></figure>
 
-* Click the "Generate Agent Template" button and we will generate a basic template for you to build from. 
+* 点击"生成代理模板"按钮，我们将为您生成一个基础模板供您构建。
 
-* You can change the name, description and visibility of the agent and add tags for more information. Or you can simply regenerate the template if you don't like the current one.
+* 您可以更改代理的名称、描述和可见性，并添加标签以提供更多信息。如果您不喜欢当前的模板，也可以简单地重新生成模板。
 
 <figure><img src="../images/9.png" alt=""></figure>
 
-* Click the "Create Agent" and you will have your own agent in just a few seconds.
+* 点击"创建代理"，您将在几秒钟内拥有自己的代理。
 
-## Step 2: Design Your Agent
+## 步骤2：设计您的代理
 
-* In the auto-generated template, we have already created some actions for you. 
+* 在自动生成的模板中，我们已经为您创建了一些动作。
 
-* To build a simple agent like our grammar checker, there's no need to add more actions. For more complex agents, you can add actions by clicking the plus button between different actions.
+* 要构建像我们的语法检查器这样的简单代理，不需要添加更多动作。对于更复杂的代理，您可以通过点击不同动作之间的加号按钮来添加动作。
 
-* Write the instructions more the model in the editor, describing what you want the model to do.
+* 在编辑器中为模型编写指令，描述您想要模型做什么。
 
 <figure><img src="../images/10.png" alt=""></figure>
 
-## Step 3: Test Your Agent
+## 步骤3：测试您的代理
 
-* Click the "Datasets" tab on the top, then click "Create Datasets". 
+* 点击顶部的"数据集"标签，然后点击"创建数据集"。
 
-* Fill in the name and description of your dataset.
+* 填写您的数据集的名称和描述。
 
-* Since this is a chatbot, the testing dataset will be in the form of a (list of) json object representing a conversation.
+* 由于这是一个聊天机器人，测试数据集将以表示对话的json对象（列表）的形式呈现。
 
 <figure><img src="../images/11.png" alt=""></figure>
 
-* After you've created the dataset, go back to the "Design" panel and choose the new dataset as the input.
+* 创建数据集后，返回"设计"面板并选择新数据集作为输入。
 
 <figure><img src="../images/11-1.png" alt=""></figure>
 
-* Click "Run Testcases" to test your agent with the dataset.
+* 点击"运行测试用例"以使用数据集测试您的代理。
 
-* The results will be shown below each action. See if the output is what you want. If not, change the settings of your agent and try again.
+* 结果将显示在每个动作下方。查看输出是否符合您的要求。如果不符合，更改代理的设置并重试。
 
 <figure><img src="../images/13.png" alt=""></figure>
 
-## Step 4: Deploy the Agent
+## 步骤4：部署代理
 
-* Click "Deploy Agent" on the top right, then click "Deploy A New Version". 
+* 点击右上角的"部署代理"，然后点击"部署新版本"。
 
-* You can use your agent on your ReByte app or integrate it into your own app using the code we provide.
+* 您可以在ReByte应用程序上使用您的代理，或使用我们提供的代码将其集成到您自己的应用程序中。
 
 <figure><img src="../images/12.png" alt=""></figure>
 
-🎉 **Congratulations, you have created your first agent!**
+🎉 **恭喜，您已经创建了您的第一个代理！**
 
-View all your agents in the "My Agents" tab. You can also clone, save, or delete your agents here.
+在"我的代理"标签中查看您的所有代理。您也可以在这里克隆、保存或删除您的代理。
 
 <figure><img src="../images/14.png" alt=""></figure>
 
-**You can try this agent [here](https://rebyte.ai/p/21b2295005587a5375d8/callable/a6e8029461744868f576/editor)**.
+**您可以在[这里](https://rebyte.ai/p/21b2295005587a5375d8/callable/a6e8029461744868f576/editor)试用这个代理**。
