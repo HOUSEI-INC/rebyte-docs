@@ -1,30 +1,30 @@
-# Function Call
+# 函数调用
 
-## Example 1
+## 示例1
 
-This is a simple demonstration of how to use the "Functions" feature. 
+这是一个如何使用"函数"功能的简单演示。
 
-* First, uncomment the code in the "Functions" section.
+* 首先，取消"函数"部分代码的注释。
 
 <figure><img src="../../../../images/openai-functions.png"></figure>
 
-* This is a detailed description of a weather API. You can use this API to get the weather information of a city.
+* 这是一个天气API的详细描述。您可以使用这个API来获取城市的天气信息。
 
-* For any given input, the model will see if there is a need to call your function. 
+* 对于任何给定的输入，模型都会判断是否需要调用您的函数。
   
-* If so, it will give you json with the arguments you need to call the function. 
+* 如果需要，它会给您一个包含调用函数所需参数的json。
   
 <figure><img src="../../../../images/openai-functions-1.png"></figure>
 
-* Otherwise, it will respond like a normal chatbot.
+* 否则，它会像普通聊天机器人一样回应。
 
 <figure><img src="../../../../images/openai-functions-2.png"></figure>
 
-* **NOTE**: If you use the "Functions" feature, you should use another action to call the actual function API. The language model only gives you the arguments you need to call the function API.
+* **注意**：如果您使用"函数"功能，您应该使用另一个动作来调用实际的函数API。语言模型只会给您调用函数API所需的参数。
 
-## Example 2
+## 示例2
 
-This is a more complex example of how to use the "Functions" feature. 
+这是一个更复杂的"函数"功能使用示例。
 
-I will show you how to use the "Functions" feature and how to connect the result of the "Functions" feature to "Http Request Maker" to call the actual function API.
+我将向您展示如何使用"函数"功能，以及如何将"函数"功能的结果连接到"Http请求制作器"来调用实际的函数API。
 
