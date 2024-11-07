@@ -1,29 +1,38 @@
-# 为你的公司主页构建一个AI智能客服助手
+# 通过`英璞来`为你的公司主页构建一个AI智能客服助手
 
-## 1. 设置数据集
+我们将利用英璞来平台构建公司知识库以及编排智能客服的工作流，再利用英璞来平台提供的API接口与公司首页对接，让我们的公司首页具备智能客服能力。
 
+## 1. 创建公司知识库
 
-### 在`数据集`中设置测试数据,创建数据集chatbot_dataset
+打开**英璞来**，进入**开发者平台**，点击**团队知识库**，点击**创建知识库**
+
+输入知识库相关信息说明，可参考图中内容,这里我们以上传网页链接为例，请选择来源类型为网页
+
+<figure><img src="../tutorials/screenshots/create_info.png" alt=""></figure>
+
+创建成功后即可添加网页链接，点击**配置网页爬虫**，添加网页链接，这里我们以添加4个微信公众号文章为例，添加后点击保存，等待平台配置爬虫，刷新即可查看爬取结果
+
+https://mp.weixin.qq.com/s/zTl2NB7d-O6HwYPaDWV7FA
+https://mp.weixin.qq.com/s/OAFUsVvrpGOYF9HUn1u_5A
+https://mp.weixin.qq.com/s/Qlqa70Kgv0I9MZGucxGMEw
+https://mp.weixin.qq.com/s/1haCzXgsYEp6rGVGz6N7Sw
+
+<figure><img src="../tutorials/screenshots/upload_info.png" alt=""></figure>
+
+自此，我们的公司知识库创建完成，接下来我们创建智能客服
+
+## 2. 创建智能客服
+
+打开**英璞来**，进入**开发者平台**，点击**团队智能体工具**，点击**创建智能体**
+
+输入智能体名称，这里我们以purvar_intelligent_agent为例，选择任意模板，创建成功后删除已有模块，重新开始编排
+
+### 在最上方智能体名称旁选择`数据集`，设置测试用例数据,创建数据集chatbot_dataset
 
 <figure><img src="../tutorials/screenshots/create_dataset.png" alt=""></figure>
 <figure><img src="../tutorials/screenshots/dataset.png" alt=""></figure>
 
-<!-- ```json
-[
-  {
-    "role": "user",
-    "content": "谁赢得了上一届欧冠联赛？"
-  },
-  {
-    "role": "assitant",
-    "content": "2022-23赛季的欧冠冠军是曼城。这是他们在该项赛事中的首个冠军。皇家马德里保持着欧冠最多冠军的记录，已经14次夺冠[0][1]。"
-  },
-  {
-    "role": "user",
-    "content": "谁打进了制胜球？"
-  }
-]
-``` -->
+
 ```json
 [
   {
@@ -33,11 +42,11 @@
 ]
 ```
 
-### 使用`代码动作`获取输入信息，数据集选择刚刚创建的chatbot_dataset
+### 回到`设计`页面，点击`功能模块Runnable Action`下拉菜单，新建`输入Input`模块，将测试用例数据集选择刚刚创建的chatbot_dataset
 
 <figure><img src="../tutorials/screenshots/input.png" alt=""></figure>
 
-### 新建`代码动作`模块EXTRACT_QUESTION获取问题信息
+### 点击`功能模块Runnable Action`下拉菜单，新建`代码动作Code`模块EXTRACT_QUESTION获取问题信息
 
 ```javascript
 _fun = (env) => {
@@ -46,7 +55,10 @@ _fun = (env) => {
 }
 ```
 
-### 新建`代码动作`MESSAGES将问题打包为标准代码格式
+<figure><img src="../tutorials/screenshots/extract_question.png" alt=""></figure>
+
+
+### 新建`代码动作Code`模块MESSAGES将问题打包为标准代码格式
 
 ```javascript
 const _fun = (env) => {
@@ -60,135 +72,80 @@ const _fun = (env) => {
 
 ```
 
-### 使用`代码动作`提取内容
+<figure><img src="../tutorials/screenshots/messages.png" alt=""></figure>
 
-```txt
-{# 在这里写入您的提示，例如：'根据以下内容回答这些问题。' #}
-{# 在下面开始您的提示： #}
-这是问题：{{EXTRACT_QUESTION}}
-这是对话历史：{{HISTORY}}
 
-借助对话历史为问题添加必要的上下文。如果上下文不相关，则不要更改问题。在这里给出问题：
-```
+### 点击`功能模块Runnable Action`下拉菜单，新建`知识搜索Search Knowledge`模块RETRIEVALS
 
-### 使用`Google_search`搜索相关内容
-```javascript
-{{REFINED_QUESTION.completion.text}}
-```
+<figure><img src="../tutorials/screenshots/retrievals.png" alt=""></figure>
 
-### 使用`代码动作`提取内容
+在“查询”代码框中输入下列内容
 
 ```javascript
-// 从谷歌搜索的有机结果中提取标题、摘要和链接
-// 限制为3个结果
-_fun = (env) => {
-  if (!env.state.GOOGLE_SEARCH.organic_results) {
-    return [
-      {
-        title: "",
-        link: ""
-      }
-    ]
+{{EXTRACT_QUESTION}}.  
+```
+
+选择知识为公司知识库company_info
+
+
+
+### 新建`代码动作Code`模块RETRIEVALS_RESULT包装检索结果
+
+```javascript
+const _fun = (env) => {
+  const acc = env.state.RETRIEVALS.reduce((acc, curr) => {
+    const documentText = curr.chunks.map((chunk) => chunk.text).join("\n")
+    acc.push(
+      `相关页面链接：${curr.document_id}\n${documentText}\n----------------------------------`
+    )
+    return acc
+  }, [])
+
+  return acc.join("\n").slice(0, 8000)
+}
+```
+
+<figure><img src="../tutorials/screenshots/retrievals_result.png" alt=""></figure>
+
+
+### 点击`功能模块Runnable Action`下拉菜单，新建`大模型LLM`模块调用大模型
+
+指令可参考如下输入
+
+```json
+我是互联网产品的销售负责人。根据以下内容，根据用户的需求推荐产品或提出解决方案。回答中要包含产品链接。要根据事实回答，不提供虚假信息。不要根据你所知道的知识来回答，而要仅根据提供给你的知识来回答。如果没有相关产品，请说公司没有这个产品。例如，请说公司没有amazon。
+{{RETRIEVALS_RESULT}}.
+请务必使用中文回答。
+```
+
+消息代码框输入
+
+```javascript
+const _fun = (env) => {
+  return env.state.MESSAGES
+}
+```
+
+函数代码框与模型配置部分可保持默认设置
+
+<figure><img src="../tutorials/screenshots/output_stream.png" alt=""></figure>
+
+### 新建`代码动作Code`模块GET_ANSWER提取并包装大模型回答内容
+```javascript
+const _fun = (env) => {
+  return {
+    role: "assistant",
+    content: env.state.OUTPUT_STREAM.message.content,
   }
-
-  return env.state.GOOGLE_SEARCH.organic_results.map((r) => {
-    return { title: r.title, link: r.link, snippet: r.snippet };
-  }).slice(0, 3);
 }
 ```
 
-### 映射结果以进行并行处理
+### 点击`功能模块Runnable Action`下拉菜单，新建`输出Output`模块，将GET_ANSWER模块输出设置为最终输出
 
-```javascript
-SEARCH_EXTRACT
-```
 
-### 使用`WEB_CRAWL`扫描页面
-```javascript
-{{SEARCH_RESULT_LOOP.link}}
-```
+<figure><img src="../tutorials/screenshots/get_answer.png" alt=""></figure>
 
-### 使用`代码动作`提取内容
-```javascript
-// 对每个链接，爬取其内容并限制在2000字节
-_fun = (env) => {
-  return {
-    content: env.state.WEB_CRAWL_1.data ? env.state.WEB_CRAWL_1.data[0].results[0].text.slice(0, 2000) : "",
-  };
-} 
-```
+自此，我们的智能客服编排完成，接下来依次点击**运行测试用例**与**部署**
 
-### 使用LLM分析内容
-```json
-{# 在这里写入您的提示，例如：'根据以下内容回答这些问题。' #}
-{# 在下面开始您的提示： #}
-
-给定以下问题：
-"""
-{{EXTRACT_QUESTION}}
-"""
-
-从以下内容中提取与问题相关的文本并进行总结：
-"""
-{# {{GOOGLE_REFERENCES.content}} #}
-{{SEARCH_RESULT_LOOP.snippet}}
-"""
-
-提取的总结内容：
-"""
-```
-
-### 使用`代码动作`提取内容
-```javascript
-_fun = (env) => {
-  return {
-    summary: env.state.MODEL_SUMMARIZE.completion.text.trim(),
-    link: env.state.SEARCH_RESULT_LOOP.link
-  };    
-}
-```
-
-使用`代码动作`提取内容并制作提示
-```javascript
-const _example = (example) => {
-  // prompt = `问题：${example.question}\n`;
-  let prompt = "内容：\n";
-  prompt += '"""\n';
-  example.forEach((d, i) => {
-    if (i > 0) {
-      prompt += '\n';
-    }
-    prompt += `链接 [${i}]: ${d.link}\n`;
-    prompt += `内容: ${d.summary.replaceAll('\n', ' ')}\n`;
-  });
-  prompt += '"""\n';
-  console.log(prompt)
-  return prompt;
-}
-
-_fun = (env) => {
-  prompt = '根据以下问题、参考链接和相关内容，创建一个带有引用的最终答案。如果部分答案可以用表格格式呈现，请使用表格格式。答案应准确简洁。\n\n 永远不要告诉我"作为一个语言模型..."或"作为一个人工智能..."，我已经知道你是LLM了。直接告诉我答案。\n\n';
-  // env.state.EXAMPLES.forEach((e) => {
-  // prompt += _example(e);
-  // prompt += `最终答案：\n"""\n${e.final}\n"""\n`;
-  // prompt += "\n";
-  // });
-  prompt += "问题：" + env.state.EXTRACT_QUESTION + "\n";
-  prompt += _example(env.state.FORMAT_SUMMARY);
-
-  prompt += `最终答案：\n"""\n`;
-
-  return { prompt }
-}
-```
-
-### 将提示发送给LLM
-```json
-{{FINAL_PROMPT.prompt}}
-```
-
-### 提取`OUTPUT_STREAM`作为输出
-```json
-{{FINAL_PROMPT.prompt}}
-```
+## 3. 公司首页接入智能客服
 
