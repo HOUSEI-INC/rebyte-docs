@@ -1,1 +1,1 @@
-{% embed url="https://www.youtube.com/watch?v=FrycwxEzLmU" %}
+{% embed url="https://youtu.be/JcPqap_cgNU" %}
